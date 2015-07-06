@@ -1,0 +1,2 @@
+C:\Users\Martin\AppData\Local\Temporary Projects\DVDClub\bin\Debug\DVDClub.exe.config
+C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.exe.config
