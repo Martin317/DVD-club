@@ -1,2 +1,14 @@
 C:\Users\Martin\AppData\Local\Temporary Projects\DVDClub\bin\Debug\DVDClub.exe.config
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.exe.config
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.exe.config
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.exe
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.pdb
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.xml
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.Form1.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.Resources.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.PeliculaConsultar.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.PeliculaNueva.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.vbproj.GenerateResource.Cache
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.exe
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.xml
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.pdb
