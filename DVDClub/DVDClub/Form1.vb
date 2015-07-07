@@ -6,11 +6,11 @@
     End Sub
 
     Private Sub btnModificarPelicula_Click(sender As Object, e As EventArgs) Handles btnModificarPelicula.Click
-        PeliculaModificar.Show()
+        PeliculaConsultar.Show()
     End Sub
 
     Private Sub btnConsultarPelicula_Click(sender As Object, e As EventArgs) Handles btnConsultarPelicula.Click
-        PeliculaConsultar.Show()
+        PeliculaModificar.Show()
     End Sub
 
     Private Sub btnBajaPelicula_Click(sender As Object, e As EventArgs) Handles btnBajaPelicula.Click
