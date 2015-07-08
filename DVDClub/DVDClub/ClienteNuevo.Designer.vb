@@ -104,7 +104,7 @@ Partial Class ClienteNuevo
         Me.labDireccion.Name = "labDireccion"
         Me.labDireccion.Size = New System.Drawing.Size(52, 13)
         Me.labDireccion.TabIndex = 7
-        Me.labDireccion.Text = "Direccion"
+        Me.labDireccion.Text = "Dirección"
         '
         'labEmail
         '
@@ -122,7 +122,7 @@ Partial Class ClienteNuevo
         Me.labTelefono.Name = "labTelefono"
         Me.labTelefono.Size = New System.Drawing.Size(49, 13)
         Me.labTelefono.TabIndex = 8
-        Me.labTelefono.Text = "Telefono"
+        Me.labTelefono.Text = "Teléfono"
         '
         'txtEmail
         '

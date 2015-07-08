@@ -140,6 +140,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ClienteConsultar.resx">
+      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClienteNuevo.resx">
       <DependentUpon>ClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
