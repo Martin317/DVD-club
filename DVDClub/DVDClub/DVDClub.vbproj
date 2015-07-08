@@ -152,6 +152,9 @@
     <EmbeddedResource Include="ClienteNuevo.resx">
       <DependentUpon>ClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientesActivos.resx">
+      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
