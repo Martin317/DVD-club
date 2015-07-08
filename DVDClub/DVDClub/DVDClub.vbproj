@@ -70,6 +70,36 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteBaja.Designer.vb">
+      <DependentUpon>ClienteBaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteBaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteConsultar.Designer.vb">
+      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteConsultar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteModificar.Designer.vb">
+      <DependentUpon>ClienteModificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteModificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteNuevo.Designer.vb">
+      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesActivos.Designer.vb">
+      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesActivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
