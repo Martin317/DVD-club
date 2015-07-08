@@ -24,3 +24,4 @@ C:\Users\Frann\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.Resou
 C:\Users\Frann\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.PeliculaConsultar.resources
 C:\Users\Frann\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.PeliculaNueva.resources
 C:\Users\Frann\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.vbproj.GenerateResource.Cache
+C:\Users\Frann\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.ClienteNuevo.resources
