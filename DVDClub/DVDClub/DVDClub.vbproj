@@ -122,19 +122,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PeliculaBaja.Designer.vb" />
+    <Compile Include="PeliculaBaja.Designer.vb">
+      <DependentUpon>PeliculaBaja.vb</DependentUpon>
+    </Compile>
     <Compile Include="PeliculaBaja.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PeliculaModificar.Designer.vb" />
+    <Compile Include="PeliculaModificar.Designer.vb">
+      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    </Compile>
     <Compile Include="PeliculaModificar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PeliculaConsultar.Designer.vb" />
-    <Compile Include="PeliculaConsultar.vb">
-      <SubType>Form</SubType>
+    <Compile Include="PeliculaNueva.Designer.vb">
+      <DependentUpon>PeliculaNueva.vb</DependentUpon>
     </Compile>
-    <Compile Include="PeliculaNueva.Designer.vb" />
     <Compile Include="PeliculaNueva.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -164,10 +166,15 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PeliculaConsultar.resx">
-      <DependentUpon>PeliculaConsultar.vb</DependentUpon>
+    <EmbeddedResource Include="PeliculaBaja.resx">
+      <DependentUpon>PeliculaBaja.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PeliculaNueva.resx" />
+    <EmbeddedResource Include="PeliculaModificar.resx">
+      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculaNueva.resx">
+      <DependentUpon>PeliculaNueva.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
