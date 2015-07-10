@@ -70,6 +70,36 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteBaja.Designer.vb">
+      <DependentUpon>ClienteBaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteBaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteConsultar.Designer.vb">
+      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteConsultar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteModificar.Designer.vb">
+      <DependentUpon>ClienteModificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteModificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteNuevo.Designer.vb">
+      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesActivos.Designer.vb">
+      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesActivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -92,13 +122,58 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PeliculaBaja.Designer.vb">
+      <DependentUpon>PeliculaBaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PeliculaBaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeliculaModificar.Designer.vb">
+      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PeliculaModificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeliculaNueva.Designer.vb">
+      <DependentUpon>PeliculaNueva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PeliculaNueva.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ClienteBaja.resx">
+      <DependentUpon>ClienteBaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteConsultar.resx">
+      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteModificar.resx">
+      <DependentUpon>ClienteModificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteNuevo.resx">
+      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesActivos.resx">
+      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculaBaja.resx">
+      <DependentUpon>PeliculaBaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculaModificar.resx">
+      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculaNueva.resx">
+      <DependentUpon>PeliculaNueva.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
