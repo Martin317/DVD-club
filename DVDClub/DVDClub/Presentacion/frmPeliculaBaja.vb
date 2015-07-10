@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 
-Public Class PeliculaBaja
+Public Class frmPeliculaBaja
 
     'Declaraciones
     Dim comando As New SqlCommand
@@ -47,6 +47,6 @@ Public Class PeliculaBaja
         'conexion.Close()
         MsgBox("¡La Pelicula fue correctamente dado de baja!", MsgBoxStyle.OkOnly, "Notificación")
     End Sub
-   
+
 
 End Class

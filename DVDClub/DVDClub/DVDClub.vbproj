@@ -70,40 +70,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteBaja.Designer.vb">
-      <DependentUpon>ClienteBaja.vb</DependentUpon>
+    <Compile Include="Presentacion\frmClienteBaja.Designer.vb">
+      <DependentUpon>frmClienteBaja.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteBaja.vb">
+    <Compile Include="Presentacion\frmClienteBaja.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteConsultar.Designer.vb">
-      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    <Compile Include="Presentacion\frmClienteConsultar.Designer.vb">
+      <DependentUpon>frmClienteConsultar.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteConsultar.vb">
+    <Compile Include="Presentacion\frmClienteConsultar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteModificar.Designer.vb">
-      <DependentUpon>ClienteModificar.vb</DependentUpon>
+    <Compile Include="Presentacion\frmClienteModificar.Designer.vb">
+      <DependentUpon>frmClienteModificar.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteModificar.vb">
+    <Compile Include="Presentacion\frmClienteModificar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteNuevo.Designer.vb">
-      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    <Compile Include="Presentacion\frmClienteNuevo.Designer.vb">
+      <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteNuevo.vb">
+    <Compile Include="Presentacion\frmClienteNuevo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientesActivos.Designer.vb">
-      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    <Compile Include="Presentacion\frmClientesActivos.Designer.vb">
+      <DependentUpon>frmClientesActivos.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientesActivos.vb">
+    <Compile Include="Presentacion\frmClientesActivos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Presentacion\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="Presentacion\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -122,42 +122,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PeliculaBaja.Designer.vb">
-      <DependentUpon>PeliculaBaja.vb</DependentUpon>
+    <Compile Include="Presentacion\frmPeliculaBaja.Designer.vb">
+      <DependentUpon>frmPeliculaBaja.vb</DependentUpon>
     </Compile>
-    <Compile Include="PeliculaBaja.vb">
+    <Compile Include="Presentacion\frmPeliculaBaja.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PeliculaModificar.Designer.vb">
-      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    <Compile Include="Presentacion\frmPeliculaModificar.Designer.vb">
+      <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </Compile>
-    <Compile Include="PeliculaModificar.vb">
+    <Compile Include="Presentacion\frmPeliculaModificar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PeliculaNueva.Designer.vb">
-      <DependentUpon>PeliculaNueva.vb</DependentUpon>
+    <Compile Include="Presentacion\frmPeliculaNueva.Designer.vb">
+      <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
     </Compile>
-    <Compile Include="PeliculaNueva.vb">
+    <Compile Include="Presentacion\frmPeliculaNueva.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClienteBaja.resx">
-      <DependentUpon>ClienteBaja.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmClienteBaja.resx">
+      <DependentUpon>frmClienteBaja.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteConsultar.resx">
-      <DependentUpon>ClienteConsultar.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmClienteConsultar.resx">
+      <DependentUpon>frmClienteConsultar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteModificar.resx">
-      <DependentUpon>ClienteModificar.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmClienteModificar.resx">
+      <DependentUpon>frmClienteModificar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteNuevo.resx">
-      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmClienteNuevo.resx">
+      <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientesActivos.resx">
-      <DependentUpon>ClientesActivos.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmClientesActivos.resx">
+      <DependentUpon>frmClientesActivos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Presentacion\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -166,14 +166,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PeliculaBaja.resx">
-      <DependentUpon>PeliculaBaja.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmPeliculaBaja.resx">
+      <DependentUpon>frmPeliculaBaja.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PeliculaModificar.resx">
-      <DependentUpon>PeliculaModificar.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmPeliculaModificar.resx">
+      <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PeliculaNueva.resx">
-      <DependentUpon>PeliculaNueva.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmPeliculaNueva.resx">
+      <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +187,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Datos\" />
+    <Folder Include="Logica\" />
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

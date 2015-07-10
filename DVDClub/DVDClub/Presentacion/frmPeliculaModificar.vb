@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 
-Public Class PeliculaModificar
+Public Class frmPeliculaModificar
 
     Dim comando As New SqlCommand
     'se le pasa a la variable conexion el String de conexion de nuestra BD
