@@ -70,6 +70,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Presentacion\frmClienteBaja.Designer.vb">
       <DependentUpon>frmClienteBaja.vb</DependentUpon>
     </Compile>
@@ -189,7 +190,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Datos\" />
     <Folder Include="Logica\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
