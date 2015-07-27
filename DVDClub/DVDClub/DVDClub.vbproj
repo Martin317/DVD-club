@@ -71,6 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.vb" />
+    <Compile Include="Datos\fAlquiler.vb" />
+    <Compile Include="Presentacion\frmAlquilerRegistrar.Designer.vb">
+      <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAlquilerRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmClienteBaja.Designer.vb">
       <DependentUpon>frmClienteBaja.vb</DependentUpon>
     </Compile>
@@ -143,6 +150,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">
+      <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmClienteBaja.resx">
       <DependentUpon>frmClienteBaja.vb</DependentUpon>
     </EmbeddedResource>
