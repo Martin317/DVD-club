@@ -33,6 +33,7 @@ Public Class fAlquiler
             desconectar()
         End Try
     End Function
-   
+
+
 
 End Class

@@ -49,3 +49,12 @@ C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmP
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaModificar.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaNueva.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.vbproj.GenerateResource.Cache
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmAlquilerRegistrar.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteBaja.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteConsultar.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteModificar.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteNuevo.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClientesActivos.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaBaja.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaModificar.resources
+C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaNueva.resources

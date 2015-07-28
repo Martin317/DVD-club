@@ -139,15 +139,11 @@
     <Compile Include="Presentacion\frmPeliculaModificar.Designer.vb">
       <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmPeliculaModificar.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Presentacion\frmPeliculaModificar.vb" />
     <Compile Include="Presentacion\frmPeliculaNueva.Designer.vb">
       <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmPeliculaNueva.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Presentacion\frmPeliculaNueva.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">
