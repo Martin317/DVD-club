@@ -38,13 +38,16 @@
     Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
         Dim alquiler As fAlquiler
         dt = alquiler.filtrar("P", cmbPeliculas.SelectedIndex, txtPeliculas.Text)
+        dgvPeliculas.DataSource = dt
 
     End Sub
 
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
-        Dim alquiler As fAlquiler
+        Dim alquiler As New fAlquiler
         dt = alquiler.filtrar("C", cmbClientes.SelectedIndex, txtClientes.Text)
+        dgvClientes.DataSource = dt
+        dgvClientes.Refresh()
     End Sub
 
-  
+
 End Class

@@ -42,37 +42,43 @@ Public Class fAlquiler
                         cmd = New SqlCommand("procFiltrarPeliculasNombre")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@Nombre", text)
+                        cmd.Parameters.AddWithValue("@Nombre", "%" + text + "%")
 
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                     Case 1
                         cmd = New SqlCommand("procFiltrarPeliculasGenero")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@Genero", text)
+                        cmd.Parameters.AddWithValue("@Genero", "%" + text + "%")
 
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                     Case 2
                         cmd = New SqlCommand("procFiltrarPeliculasIdioma")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@Idioma", text)
+                        cmd.Parameters.AddWithValue("@Idioma", "%" + text + "%")
 
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                 End Select
             ElseIf opcion = "C" Then
@@ -81,34 +87,41 @@ Public Class fAlquiler
                         cmd = New SqlCommand("procFiltrarClientesNombre")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@Nombre", text)
+                        cmd.Parameters.AddWithValue("@Nombre", "%" + text + "%")
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                     Case 1
                         cmd = New SqlCommand("procFiltrarClientesApellido")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@Apellido", text)
+                        cmd.Parameters.AddWithValue("@Apellido", "%" + text + "%")
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                     Case 2
+                        Dim dni = CType(text, Integer)
                         cmd = New SqlCommand("procFiltrarClientesDNI")
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Connection = cnn
-                        cmd.Parameters.AddWithValue("@DNI", text)
+                        cmd.Parameters.AddWithValue("@DNI", dni)
                         If cmd.ExecuteNonQuery Then
                             Dim dt As New DataTable
                             Dim da As New SqlDataAdapter(cmd)
                             da.Fill(dt)
                             Return dt
+                        Else
+                            Return Nothing
                         End If
                 End Select
 
