@@ -43,111 +43,125 @@ Partial Class frmClienteModificar
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(104, 252)
+        Me.txtEmail.Location = New System.Drawing.Point(139, 310)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(126, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(167, 22)
         Me.txtEmail.TabIndex = 57
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(104, 213)
+        Me.txtTelefono.Location = New System.Drawing.Point(139, 262)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTelefono.MaxLength = 50
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(126, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(167, 22)
         Me.txtTelefono.TabIndex = 56
         '
         'labEmail
         '
         Me.labEmail.AutoSize = True
-        Me.labEmail.Location = New System.Drawing.Point(45, 255)
+        Me.labEmail.Location = New System.Drawing.Point(60, 314)
+        Me.labEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labEmail.Name = "labEmail"
-        Me.labEmail.Size = New System.Drawing.Size(32, 13)
+        Me.labEmail.Size = New System.Drawing.Size(42, 17)
         Me.labEmail.TabIndex = 55
         Me.labEmail.Text = "Email"
         '
         'labTelefono
         '
         Me.labTelefono.AutoSize = True
-        Me.labTelefono.Location = New System.Drawing.Point(45, 216)
+        Me.labTelefono.Location = New System.Drawing.Point(60, 266)
+        Me.labTelefono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labTelefono.Name = "labTelefono"
-        Me.labTelefono.Size = New System.Drawing.Size(49, 13)
+        Me.labTelefono.Size = New System.Drawing.Size(64, 17)
         Me.labTelefono.TabIndex = 54
         Me.labTelefono.Text = "Teléfono"
         '
         'labDireccion
         '
         Me.labDireccion.AutoSize = True
-        Me.labDireccion.Location = New System.Drawing.Point(45, 177)
+        Me.labDireccion.Location = New System.Drawing.Point(60, 218)
+        Me.labDireccion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labDireccion.Name = "labDireccion"
-        Me.labDireccion.Size = New System.Drawing.Size(52, 13)
+        Me.labDireccion.Size = New System.Drawing.Size(67, 17)
         Me.labDireccion.TabIndex = 53
         Me.labDireccion.Text = "Dirección"
         '
         'labDNI
         '
         Me.labDNI.AutoSize = True
-        Me.labDNI.Location = New System.Drawing.Point(45, 138)
+        Me.labDNI.Location = New System.Drawing.Point(60, 170)
+        Me.labDNI.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labDNI.Name = "labDNI"
-        Me.labDNI.Size = New System.Drawing.Size(26, 13)
+        Me.labDNI.Size = New System.Drawing.Size(31, 17)
         Me.labDNI.TabIndex = 52
         Me.labDNI.Text = "DNI"
         '
         'labApellido
         '
         Me.labApellido.AutoSize = True
-        Me.labApellido.Location = New System.Drawing.Point(45, 99)
+        Me.labApellido.Location = New System.Drawing.Point(60, 122)
+        Me.labApellido.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labApellido.Name = "labApellido"
-        Me.labApellido.Size = New System.Drawing.Size(44, 13)
+        Me.labApellido.Size = New System.Drawing.Size(58, 17)
         Me.labApellido.TabIndex = 51
         Me.labApellido.Text = "Apellido"
         '
         'labNombre
         '
         Me.labNombre.AutoSize = True
-        Me.labNombre.Location = New System.Drawing.Point(45, 60)
+        Me.labNombre.Location = New System.Drawing.Point(60, 74)
+        Me.labNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labNombre.Name = "labNombre"
-        Me.labNombre.Size = New System.Drawing.Size(44, 13)
+        Me.labNombre.Size = New System.Drawing.Size(58, 17)
         Me.labNombre.TabIndex = 50
         Me.labNombre.Text = "Nombre"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(104, 174)
+        Me.txtDireccion.Location = New System.Drawing.Point(139, 214)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDireccion.MaxLength = 50
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(126, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(167, 22)
         Me.txtDireccion.TabIndex = 49
         '
         'txtDNI
         '
-        Me.txtDNI.Location = New System.Drawing.Point(104, 135)
+        Me.txtDNI.Location = New System.Drawing.Point(139, 166)
+        Me.txtDNI.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDNI.MaxLength = 50
         Me.txtDNI.Name = "txtDNI"
-        Me.txtDNI.Size = New System.Drawing.Size(126, 20)
+        Me.txtDNI.Size = New System.Drawing.Size(167, 22)
         Me.txtDNI.TabIndex = 48
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(104, 96)
+        Me.txtApellido.Location = New System.Drawing.Point(139, 118)
+        Me.txtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtApellido.MaxLength = 50
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(126, 20)
+        Me.txtApellido.Size = New System.Drawing.Size(167, 22)
         Me.txtApellido.TabIndex = 47
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(104, 57)
+        Me.txtNombre.Location = New System.Drawing.Point(139, 70)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombre.MaxLength = 50
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(126, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(167, 22)
         Me.txtNombre.TabIndex = 46
         '
         'gboxDatos
         '
-        Me.gboxDatos.Location = New System.Drawing.Point(14, 39)
+        Me.gboxDatos.Location = New System.Drawing.Point(19, 48)
+        Me.gboxDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gboxDatos.Name = "gboxDatos"
-        Me.gboxDatos.Size = New System.Drawing.Size(260, 239)
+        Me.gboxDatos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gboxDatos.Size = New System.Drawing.Size(347, 294)
         Me.gboxDatos.TabIndex = 45
         Me.gboxDatos.TabStop = False
         Me.gboxDatos.Text = "Datos"
@@ -155,43 +169,47 @@ Partial Class frmClienteModificar
         'labCliente
         '
         Me.labCliente.AutoSize = True
-        Me.labCliente.Location = New System.Drawing.Point(45, 15)
+        Me.labCliente.Location = New System.Drawing.Point(60, 18)
+        Me.labCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labCliente.Name = "labCliente"
-        Me.labCliente.Size = New System.Drawing.Size(39, 13)
+        Me.labCliente.Size = New System.Drawing.Size(51, 17)
         Me.labCliente.TabIndex = 44
         Me.labCliente.Text = "Cliente"
         '
         'cmbCliente
         '
         Me.cmbCliente.FormattingEnabled = True
-        Me.cmbCliente.Location = New System.Drawing.Point(104, 12)
+        Me.cmbCliente.Location = New System.Drawing.Point(139, 15)
+        Me.cmbCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbCliente.Name = "cmbCliente"
-        Me.cmbCliente.Size = New System.Drawing.Size(126, 21)
+        Me.cmbCliente.Size = New System.Drawing.Size(167, 24)
         Me.cmbCliente.TabIndex = 43
         '
         'btnAtras
         '
-        Me.btnAtras.Location = New System.Drawing.Point(155, 284)
+        Me.btnAtras.Location = New System.Drawing.Point(207, 350)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(75, 23)
+        Me.btnAtras.Size = New System.Drawing.Size(100, 28)
         Me.btnAtras.TabIndex = 42
         Me.btnAtras.Text = "Atrás"
         Me.btnAtras.UseVisualStyleBackColor = True
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(74, 284)
+        Me.btnAceptar.Location = New System.Drawing.Point(99, 350)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(100, 28)
         Me.btnAceptar.TabIndex = 58
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'ClienteModificar
+        'frmClienteModificar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(287, 317)
+        Me.ClientSize = New System.Drawing.Size(383, 390)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtTelefono)
@@ -209,7 +227,8 @@ Partial Class frmClienteModificar
         Me.Controls.Add(Me.labCliente)
         Me.Controls.Add(Me.cmbCliente)
         Me.Controls.Add(Me.btnAtras)
-        Me.Name = "ClienteModificar"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "frmClienteModificar"
         Me.Text = "ClienteModificar"
         Me.ResumeLayout(False)
         Me.PerformLayout()
