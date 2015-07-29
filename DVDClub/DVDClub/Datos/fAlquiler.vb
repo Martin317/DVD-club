@@ -33,7 +33,95 @@ Public Class fAlquiler
             desconectar()
         End Try
     End Function
+    Public Function filtrar(ByVal opcion As Char, ByVal index As Integer, ByVal text As String) As DataTable
+        Try
+            conectar()
+            If opcion = "P" Then
+                Select Case index
+                    Case 0
+                        cmd = New SqlCommand("procFiltrarPeliculasNombre")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@Nombre", text)
 
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                    Case 1
+                        cmd = New SqlCommand("procFiltrarPeliculasGenero")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@Genero", text)
+
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                    Case 2
+                        cmd = New SqlCommand("procFiltrarPeliculasIdioma")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@Idioma", text)
+
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                End Select
+            ElseIf opcion = "C" Then
+                Select Case index
+                    Case 0
+                        cmd = New SqlCommand("procFiltrarClientesNombre")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@Nombre", text)
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                    Case 1
+                        cmd = New SqlCommand("procFiltrarClientesApellido")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@Apellido", text)
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                    Case 2
+                        cmd = New SqlCommand("procFiltrarClientesDNI")
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Connection = cnn
+                        cmd.Parameters.AddWithValue("@DNI", text)
+                        If cmd.ExecuteNonQuery Then
+                            Dim dt As New DataTable
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(dt)
+                            Return dt
+                        End If
+                End Select
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 
 
 End Class

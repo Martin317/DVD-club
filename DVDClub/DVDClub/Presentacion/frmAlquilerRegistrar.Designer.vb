@@ -38,6 +38,7 @@ Partial Class frmAlquilerRegistrar
         Me.cmbClientes = New System.Windows.Forms.ComboBox()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPeliculas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -79,6 +80,7 @@ Partial Class frmAlquilerRegistrar
         'txtPeliculas
         '
         Me.txtPeliculas.Location = New System.Drawing.Point(219, 37)
+        Me.txtPeliculas.MaxLength = 50
         Me.txtPeliculas.Multiline = True
         Me.txtPeliculas.Name = "txtPeliculas"
         Me.txtPeliculas.Size = New System.Drawing.Size(408, 24)
@@ -86,7 +88,9 @@ Partial Class frmAlquilerRegistrar
         '
         'cmbPeliculas
         '
+        Me.cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPeliculas.FormattingEnabled = True
+        Me.cmbPeliculas.Items.AddRange(New Object() {"Nombre", "Genero", "Idioma"})
         Me.cmbPeliculas.Location = New System.Drawing.Point(92, 37)
         Me.cmbPeliculas.Name = "cmbPeliculas"
         Me.cmbPeliculas.Size = New System.Drawing.Size(121, 24)
@@ -163,6 +167,7 @@ Partial Class frmAlquilerRegistrar
         'txtClientes
         '
         Me.txtClientes.Location = New System.Drawing.Point(219, 37)
+        Me.txtClientes.MaxLength = 50
         Me.txtClientes.Multiline = True
         Me.txtClientes.Name = "txtClientes"
         Me.txtClientes.Size = New System.Drawing.Size(408, 24)
@@ -170,7 +175,9 @@ Partial Class frmAlquilerRegistrar
         '
         'cmbClientes
         '
+        Me.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClientes.FormattingEnabled = True
+        Me.cmbClientes.Items.AddRange(New Object() {"Nombre", "Apellido", "DNI"})
         Me.cmbClientes.Location = New System.Drawing.Point(92, 37)
         Me.cmbClientes.Name = "cmbClientes"
         Me.cmbClientes.Size = New System.Drawing.Size(121, 24)
@@ -194,11 +201,21 @@ Partial Class frmAlquilerRegistrar
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'btnConfirmar
+        '
+        Me.btnConfirmar.Location = New System.Drawing.Point(498, 630)
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.Size = New System.Drawing.Size(166, 44)
+        Me.btnConfirmar.TabIndex = 5
+        Me.btnConfirmar.Text = "Confirmar"
+        Me.btnConfirmar.UseVisualStyleBackColor = True
+        '
         'frmAlquilerRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(886, 687)
+        Me.Controls.Add(Me.btnConfirmar)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -229,4 +246,5 @@ Partial Class frmAlquilerRegistrar
     Friend WithEvents cmbClientes As System.Windows.Forms.ComboBox
     Friend WithEvents dgvClientes As System.Windows.Forms.DataGridView
     Friend WithEvents btnSalir As System.Windows.Forms.Button
+    Friend WithEvents btnConfirmar As System.Windows.Forms.Button
 End Class

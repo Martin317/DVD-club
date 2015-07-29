@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\fAlquiler.vb" />
+    <Compile Include="Datos\fPelicula.vb" />
     <Compile Include="Presentacion\frmAlquilerRegistrar.Designer.vb">
       <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </Compile>
@@ -139,11 +140,15 @@
     <Compile Include="Presentacion\frmPeliculaModificar.Designer.vb">
       <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmPeliculaModificar.vb" />
+    <Compile Include="Presentacion\frmPeliculaModificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmPeliculaNueva.Designer.vb">
       <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmPeliculaNueva.vb" />
+    <Compile Include="Presentacion\frmPeliculaNueva.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">

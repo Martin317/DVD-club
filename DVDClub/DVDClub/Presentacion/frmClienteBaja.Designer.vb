@@ -31,48 +31,53 @@ Partial Class frmClienteBaja
         'labCliente
         '
         Me.labCliente.AutoSize = True
-        Me.labCliente.Location = New System.Drawing.Point(49, 37)
+        Me.labCliente.Location = New System.Drawing.Point(65, 46)
+        Me.labCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labCliente.Name = "labCliente"
-        Me.labCliente.Size = New System.Drawing.Size(39, 13)
+        Me.labCliente.Size = New System.Drawing.Size(51, 17)
         Me.labCliente.TabIndex = 30
         Me.labCliente.Text = "Cliente"
         '
         'cmbCliente
         '
         Me.cmbCliente.FormattingEnabled = True
-        Me.cmbCliente.Location = New System.Drawing.Point(94, 34)
+        Me.cmbCliente.Location = New System.Drawing.Point(125, 42)
+        Me.cmbCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbCliente.Name = "cmbCliente"
-        Me.cmbCliente.Size = New System.Drawing.Size(126, 21)
+        Me.cmbCliente.Size = New System.Drawing.Size(167, 24)
         Me.cmbCliente.TabIndex = 29
         '
         'btnAtras
         '
-        Me.btnAtras.Location = New System.Drawing.Point(155, 74)
+        Me.btnAtras.Location = New System.Drawing.Point(207, 91)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(75, 23)
+        Me.btnAtras.Size = New System.Drawing.Size(100, 28)
         Me.btnAtras.TabIndex = 31
         Me.btnAtras.Text = "Atrás"
         Me.btnAtras.UseVisualStyleBackColor = True
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(74, 74)
+        Me.btnAceptar.Location = New System.Drawing.Point(99, 91)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(100, 28)
         Me.btnAceptar.TabIndex = 32
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'ClienteBaja
+        'frmClienteBaja
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 113)
+        Me.ClientSize = New System.Drawing.Size(379, 139)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.labCliente)
         Me.Controls.Add(Me.cmbCliente)
-        Me.Name = "ClienteBaja"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "frmClienteBaja"
         Me.Text = "ClienteBaja"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -6,6 +6,7 @@ Public Class Conexion
     Protected Function conectar()
         Try
             cnn = New SqlConnection("Data Source=MARTINPC\SQLExpress;User ID=sa;Password=qweasdzxc159753;Initial Catalog=dvdclubdb;Integrated Security=False")
+            'TODO Ver usuario, contraseña y seguridad
             cnn.Open()
             Return True
         Catch ex As Exception

@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmPeliculaModificar
-    Inherits DVDClub.Conexion
+    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -56,9 +56,11 @@ Partial Class frmPeliculaModificar
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 105)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 129)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(618, 346)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(824, 426)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
@@ -66,101 +68,113 @@ Partial Class frmPeliculaModificar
         'dtpFechaLanzamiento
         '
         Me.dtpFechaLanzamiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaLanzamiento.Location = New System.Drawing.Point(449, 97)
+        Me.dtpFechaLanzamiento.Location = New System.Drawing.Point(599, 119)
+        Me.dtpFechaLanzamiento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpFechaLanzamiento.Name = "dtpFechaLanzamiento"
-        Me.dtpFechaLanzamiento.Size = New System.Drawing.Size(155, 20)
+        Me.dtpFechaLanzamiento.Size = New System.Drawing.Size(205, 22)
         Me.dtpFechaLanzamiento.TabIndex = 27
         Me.dtpFechaLanzamiento.Value = New Date(2010, 1, 1, 0, 0, 0, 0)
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(341, 279)
+        Me.btnCancelar.Location = New System.Drawing.Point(455, 343)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(104, 47)
+        Me.btnCancelar.Size = New System.Drawing.Size(139, 58)
         Me.btnCancelar.TabIndex = 25
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(175, 279)
+        Me.btnModificar.Location = New System.Drawing.Point(233, 343)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(104, 47)
+        Me.btnModificar.Size = New System.Drawing.Size(139, 58)
         Me.btnModificar.TabIndex = 26
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(110, 164)
+        Me.txtDescripcion.Location = New System.Drawing.Point(147, 202)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(439, 89)
+        Me.txtDescripcion.Size = New System.Drawing.Size(584, 109)
         Me.txtDescripcion.TabIndex = 21
         '
         'txtGenero
         '
-        Me.txtGenero.Location = New System.Drawing.Point(110, 97)
+        Me.txtGenero.Location = New System.Drawing.Point(147, 119)
+        Me.txtGenero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtGenero.Name = "txtGenero"
-        Me.txtGenero.Size = New System.Drawing.Size(142, 20)
+        Me.txtGenero.Size = New System.Drawing.Size(188, 22)
         Me.txtGenero.TabIndex = 22
         '
         'txtIdioma
         '
-        Me.txtIdioma.Location = New System.Drawing.Point(449, 24)
+        Me.txtIdioma.Location = New System.Drawing.Point(599, 30)
+        Me.txtIdioma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIdioma.Name = "txtIdioma"
-        Me.txtIdioma.Size = New System.Drawing.Size(155, 20)
+        Me.txtIdioma.Size = New System.Drawing.Size(205, 22)
         Me.txtIdioma.TabIndex = 23
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(110, 21)
+        Me.txtNombre.Location = New System.Drawing.Point(147, 26)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(142, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(188, 22)
         Me.txtNombre.TabIndex = 24
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 167)
+        Me.Label6.Location = New System.Drawing.Point(20, 206)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(66, 13)
+        Me.Label6.Size = New System.Drawing.Size(86, 17)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Descripción:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(286, 104)
+        Me.Label4.Location = New System.Drawing.Point(381, 128)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(118, 13)
+        Me.Label4.Size = New System.Drawing.Size(156, 17)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Fecha de Lanzamiento:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 104)
+        Me.Label3.Location = New System.Drawing.Point(20, 128)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.Size = New System.Drawing.Size(60, 17)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Genero:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(286, 24)
+        Me.Label2.Location = New System.Drawing.Point(381, 30)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.Size = New System.Drawing.Size(53, 17)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Idioma:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 24)
+        Me.Label1.Location = New System.Drawing.Point(20, 30)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.Size = New System.Drawing.Size(62, 17)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Nombre:"
         '
@@ -168,9 +182,11 @@ Partial Class frmPeliculaModificar
         '
         Me.GroupBox1.Controls.Add(Me.cmbPelicula)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(618, 87)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(824, 107)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pelicula a Modificar"
@@ -178,28 +194,31 @@ Partial Class frmPeliculaModificar
         'cmbPelicula
         '
         Me.cmbPelicula.FormattingEnabled = True
-        Me.cmbPelicula.Location = New System.Drawing.Point(213, 38)
+        Me.cmbPelicula.Location = New System.Drawing.Point(284, 47)
+        Me.cmbPelicula.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbPelicula.Name = "cmbPelicula"
-        Me.cmbPelicula.Size = New System.Drawing.Size(278, 21)
+        Me.cmbPelicula.Size = New System.Drawing.Size(369, 24)
         Me.cmbPelicula.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(127, 46)
+        Me.Label5.Location = New System.Drawing.Point(169, 57)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.Size = New System.Drawing.Size(61, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Pelicula:"
         '
-        'PeliculaModificar
+        'frmPeliculaModificar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(649, 464)
+        Me.ClientSize = New System.Drawing.Size(865, 571)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "PeliculaModificar"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "frmPeliculaModificar"
         Me.Text = "PeliculaModificar"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
