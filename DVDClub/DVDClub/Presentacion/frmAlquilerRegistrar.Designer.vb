@@ -28,6 +28,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtPeliculas = New System.Windows.Forms.TextBox()
         Me.cmbPeliculas = New System.Windows.Forms.ComboBox()
         Me.dgvPeliculas = New System.Windows.Forms.DataGridView()
+        Me.clmSeleccionarPelicula = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnModificarCliente = New System.Windows.Forms.Button()
         Me.btnRegistrarCliente = New System.Windows.Forms.Button()
@@ -38,7 +39,6 @@ Partial Class frmAlquilerRegistrar
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnConfirmar = New System.Windows.Forms.Button()
-        Me.clmSeleccionarPelicula = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvPeliculas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -103,12 +103,22 @@ Partial Class frmAlquilerRegistrar
         Me.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPeliculas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmSeleccionarPelicula})
         Me.dgvPeliculas.Location = New System.Drawing.Point(6, 76)
+        Me.dgvPeliculas.MultiSelect = False
         Me.dgvPeliculas.Name = "dgvPeliculas"
         Me.dgvPeliculas.ReadOnly = True
         Me.dgvPeliculas.RowTemplate.Height = 24
         Me.dgvPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPeliculas.Size = New System.Drawing.Size(812, 221)
         Me.dgvPeliculas.TabIndex = 0
+        '
+        'clmSeleccionarPelicula
+        '
+        Me.clmSeleccionarPelicula.FalseValue = "False"
+        Me.clmSeleccionarPelicula.HeaderText = "Seleccionar"
+        Me.clmSeleccionarPelicula.Name = "clmSeleccionarPelicula"
+        Me.clmSeleccionarPelicula.ReadOnly = True
+        Me.clmSeleccionarPelicula.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.clmSeleccionarPelicula.TrueValue = "True"
         '
         'GroupBox2
         '
@@ -213,20 +223,11 @@ Partial Class frmAlquilerRegistrar
         Me.btnConfirmar.Text = "Confirmar"
         Me.btnConfirmar.UseVisualStyleBackColor = True
         '
-        'clmSeleccionarPelicula
-        '
-        Me.clmSeleccionarPelicula.FalseValue = "0"
-        Me.clmSeleccionarPelicula.HeaderText = "Seleccionar"
-        Me.clmSeleccionarPelicula.Name = "clmSeleccionarPelicula"
-        Me.clmSeleccionarPelicula.ReadOnly = True
-        Me.clmSeleccionarPelicula.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.clmSeleccionarPelicula.TrueValue = "1"
-        '
         'frmAlquilerRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(886, 687)
+        Me.ClientSize = New System.Drawing.Size(858, 687)
         Me.Controls.Add(Me.btnConfirmar)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.GroupBox2)
