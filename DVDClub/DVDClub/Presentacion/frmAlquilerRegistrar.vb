@@ -27,7 +27,7 @@
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = MsgBoxResult.Yes Then
            
-            alquiler.insertarAlquiler(idCliente, idPelicula)
+            '   alquiler.insertarAlquiler(idCliente, idPelicula)
             'TODO Cambiar estado de cliente inactivo a activo.
         End If
     End Sub
@@ -37,7 +37,7 @@
     End Sub
 
     Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
-        Dim alquiler As fAlquiler
+        Dim alquiler As New fAlquiler
         dt = alquiler.filtrar("P", cmbPeliculas.SelectedIndex, txtPeliculas.Text)
         dgvPeliculas.DataSource = dt
 

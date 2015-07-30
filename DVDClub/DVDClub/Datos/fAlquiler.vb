@@ -124,7 +124,8 @@ Public Class fAlquiler
                             Return Nothing
                         End If
                 End Select
-
+            Else
+                Return Nothing
             End If
         Catch ex As Exception
             MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
@@ -135,6 +136,7 @@ Public Class fAlquiler
             desconectar()
         End Try
     End Function
+
     Public Sub insertarAlquiler(ByVal idCliente As Integer, ByVal idPelicula As Integer)
         Try
             conectar()
