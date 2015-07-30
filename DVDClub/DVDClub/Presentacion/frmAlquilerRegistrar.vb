@@ -26,11 +26,7 @@
         Dim respuesta As Integer = MessageBox.Show("¿Desea registrar los datos del alquiler?", "Confirmacion de alquiler",
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = MsgBoxResult.Yes Then
-            Dim alquiler As New fAlquiler
-            Dim filaCliente As DataRowView = DirectCast(dgvClientes.Selec, DataRowView)
-            Dim idCliente As Integer = filaCliente.Item("Numero de cliente").ToString
-            Dim filaPelicula As DataRowView = DirectCast(dgvPeliculas.SelectedItem, DataRowView)
-            Dim idPelicula As Integer = filaPelicula.Item("Numero de cliente").ToString
+           
             alquiler.insertarAlquiler(idCliente, idPelicula)
             'TODO Cambiar estado de cliente inactivo a activo.
         End If

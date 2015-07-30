@@ -73,6 +73,14 @@
     <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\fAlquiler.vb" />
     <Compile Include="Datos\fPelicula.vb" />
+    <Compile Include="Logica\logAlquiler.vb" />
+    <Compile Include="Logica\logCliente.vb" />
+    <Compile Include="Logica\logDetalleAlquiler.vb" />
+    <Compile Include="Logica\logEstado.vb" />
+    <Compile Include="Logica\logPelicula.vb" />
+    <Compile Include="Logica\logSesion.vb" />
+    <Compile Include="Logica\logPeliculaEspecifica.vb" />
+    <Compile Include="Logica\logUsuario.vb" />
     <Compile Include="Presentacion\frmAlquilerRegistrar.Designer.vb">
       <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </Compile>
@@ -201,7 +209,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logica\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
