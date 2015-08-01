@@ -1,11 +1,12 @@
 ﻿Public Class frmAlquilerRegistrar
     Private dt As New DataTable
-    Private primeraVez As Boolean = True
+    Private primeraVez As Boolean
     Private Sub frmAlquilerRegistrar2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         funcMostrarClientes()
         funcMostrarPeliculas()
         cmbPeliculas.SelectedIndex = 0
-
+        primeraVez = True
+        dgvDetalles.DataSource = Nothing
     End Sub
     Private Sub funcMostrarClientes()
         Dim clientes As New fCliente
