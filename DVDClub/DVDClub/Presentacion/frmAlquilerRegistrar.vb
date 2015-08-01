@@ -1,5 +1,6 @@
-﻿Public Class frmAlquilerRegistrar2
+﻿Public Class frmAlquilerRegistrar
     Private dt As New DataTable
+    Private primeraVez As Boolean = True
     Private Sub frmAlquilerRegistrar2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         funcMostrarClientes()
         funcMostrarPeliculas()
@@ -24,6 +25,7 @@
         Dim peliculas As New fPelicula
         dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
         dgvPeliculas.DataSource = dt
+        'TODO Cuando se selecciona una pelicula y se busca otra, se borra la seleccion ._.
     End Sub
 
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
@@ -41,6 +43,7 @@
             MsgBox(peliculasID(1))
             ' alquiler.insertarAlquiler()
             'TODO Cambiar estado de cliente inactivo a activo.
+
         End If
     End Sub
 
@@ -85,35 +88,34 @@
         End If
     End Sub
 
-
+    'Funcion que inserta un ejemplar disponible de cada pelicula seleccionada en el dgvDetalles
     Private Sub btnAgregarADetalle_Click(sender As Object, e As EventArgs) Handles btnAgregarADetalle.Click
-        Dim peliculasID As New List(Of Integer)
-        For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
-            If dr.Cells(0).Value = True Then
-                peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
-            End If
-        Next
-        Dim num As Integer
-        Dim peliculas As New fPelicula
-        For Each num In peliculasID
-            dt = peliculas.mostrarEjemplaresDisponibles(num)
-            ' Referenciamos el objeto DataTable enlazado
-            ' con el control DataGridView.
-
-            Dim dtGrid As New DataTable()
-            dtGrid = CType(dgvDetalles.DataSource, DataTable)
-
-            ' Conforme recorremos la colección de filas del objeto
-            ' DataTable temporal, las vamos añadiendo al objeto
-            ' DataTable enlazado con el control DataGridView.
-            '
-            For Each row As DataRow In dt.Rows
-                dtGrid.ImportRow(row)
+        If primeraVez = True Then
+            Dim peliculasID As New List(Of Integer)
+            For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
+                If dr.Cells(0).Value = True Then
+                    peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
+                End If
             Next
-
-
-
-            'TODO Llamar a funcion que inserte un ejemplar de cada pelicula seleccionada en el dgvDetalles
-        Next
+            Dim num As Integer
+            Dim peliculas As New fPelicula
+            Dim dtTemp As New DataTable
+            For Each num In peliculasID
+                dt = peliculas.mostrarEjemplaresDisponibles(num)
+                dtTemp = TryCast(dgvDetalles.DataSource, DataTable)
+                If Not (dtTemp Is Nothing) Then
+                    For Each row As DataRow In dtTemp.Rows
+                        dt.ImportRow(row)
+                    Next
+                    dgvDetalles.DataSource = dt
+                    dgvPeliculas.Refresh()
+                Else
+                    dgvDetalles.DataSource = dt
+                    dgvPeliculas.Refresh()
+                End If
+                'TODO cambiar estado del ejemplar a no disponible
+            Next
+            primeraVez = False
+        End If
     End Sub
 End Class

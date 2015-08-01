@@ -85,7 +85,6 @@ Public Class fPelicula
             desconectar()
         End Try
     End Function
-
     Public Function mostrarDatos() As DataTable
 
         Try

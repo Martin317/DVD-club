@@ -82,10 +82,10 @@
     <Compile Include="Logica\logSesion.vb" />
     <Compile Include="Logica\logPeliculaEspecifica.vb" />
     <Compile Include="Logica\logUsuario.vb" />
-    <Compile Include="Presentacion\frmAlquilerRegistrar2.Designer.vb">
-      <DependentUpon>frmAlquilerRegistrar2.vb</DependentUpon>
+    <Compile Include="Presentacion\frmAlquilerRegistrar.Designer.vb">
+      <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmAlquilerRegistrar2.vb">
+    <Compile Include="Presentacion\frmAlquilerRegistrar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmClienteBaja.Designer.vb">
@@ -160,8 +160,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar2.resx">
-      <DependentUpon>frmAlquilerRegistrar2.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">
+      <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmClienteBaja.resx">
       <DependentUpon>frmClienteBaja.vb</DependentUpon>
