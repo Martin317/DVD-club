@@ -54,7 +54,7 @@ Public Class frmPeliculaModificar
 
     Private Sub funcMostrarDatos()
         Dim Datos As New fPelicula
-        cmbPelicula.DataSource = Datos.mostrardatos
+        cmbPelicula.DataSource = Datos.mostrarDatosPeliculas()
         cmbPelicula.DisplayMember = "Pelicula"
         cmbPelicula.ValueMember = "pelicula_id"
     End Sub

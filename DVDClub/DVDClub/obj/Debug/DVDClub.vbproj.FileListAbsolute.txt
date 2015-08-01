@@ -29,7 +29,6 @@ C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.pdb
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.exe
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.pdb
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\bin\Debug\DVDClub.xml
-C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmAlquilerRegistrar.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteBaja.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteConsultar.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmClienteModificar.resources

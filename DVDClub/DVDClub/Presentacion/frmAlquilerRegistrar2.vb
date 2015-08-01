@@ -7,22 +7,22 @@
 
     End Sub
     Private Sub funcMostrarClientes()
-        Dim clientes As New fAlquiler
-        dt = clientes.mostrarDatos("C")
+        Dim clientes As New fCliente
+        dt = clientes.mostrarDatos()
         cmbBuscarClientes.DataSource = dt
         cmbBuscarClientes.DisplayMember = "Cliente"
         cmbBuscarClientes.ValueMember = "cliente_id"
     End Sub
 
     Private Sub funcMostrarPeliculas()
-        Dim peliculas As New fAlquiler
-        dt = peliculas.mostrarDatos("P")
+        Dim peliculas As New fPelicula
+        dt = peliculas.mostrarDatos()
         dgvPeliculas.DataSource = dt
     End Sub
 
     Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
-        Dim alquiler As New fAlquiler
-        dt = alquiler.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
+        Dim peliculas As New fPelicula
+        dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
         dgvPeliculas.DataSource = dt
     End Sub
 
@@ -86,4 +86,34 @@
     End Sub
 
 
+    Private Sub btnAgregarADetalle_Click(sender As Object, e As EventArgs) Handles btnAgregarADetalle.Click
+        Dim peliculasID As New List(Of Integer)
+        For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
+            If dr.Cells(0).Value = True Then
+                peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
+            End If
+        Next
+        Dim num As Integer
+        Dim peliculas As New fPelicula
+        For Each num In peliculasID
+            dt = peliculas.mostrarEjemplaresDisponibles(num)
+            ' Referenciamos el objeto DataTable enlazado
+            ' con el control DataGridView.
+
+            Dim dtGrid As New DataTable()
+            dtGrid = CType(dgvDetalles.DataSource, DataTable)
+
+            ' Conforme recorremos la colección de filas del objeto
+            ' DataTable temporal, las vamos añadiendo al objeto
+            ' DataTable enlazado con el control DataGridView.
+            '
+            For Each row As DataRow In dt.Rows
+                dtGrid.ImportRow(row)
+            Next
+
+
+
+            'TODO Llamar a funcion que inserte un ejemplar de cada pelicula seleccionada en el dgvDetalles
+        Next
+    End Sub
 End Class

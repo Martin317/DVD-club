@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\fAlquiler.vb" />
+    <Compile Include="Datos\fCliente.vb" />
     <Compile Include="Datos\fPelicula.vb" />
     <Compile Include="Logica\logAlquiler.vb" />
     <Compile Include="Logica\logCliente.vb" />

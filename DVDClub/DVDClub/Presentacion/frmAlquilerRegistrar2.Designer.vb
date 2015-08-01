@@ -43,7 +43,7 @@ Partial Class frmAlquilerRegistrar2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbBuscarClientes = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvDetalles = New System.Windows.Forms.DataGridView()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -56,7 +56,7 @@ Partial Class frmAlquilerRegistrar2
         Me.clmSeleccionarPelicula = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDetalles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvPeliculas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,7 +85,7 @@ Partial Class frmAlquilerRegistrar2
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 409)
+        Me.GroupBox1.Size = New System.Drawing.Size(451, 409)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
@@ -288,32 +288,32 @@ Partial Class frmAlquilerRegistrar2
         Me.cmbBuscarClientes.FormattingEnabled = True
         Me.cmbBuscarClientes.Location = New System.Drawing.Point(112, 21)
         Me.cmbBuscarClientes.Name = "cmbBuscarClientes"
-        Me.cmbBuscarClientes.Size = New System.Drawing.Size(345, 24)
+        Me.cmbBuscarClientes.Size = New System.Drawing.Size(324, 24)
         Me.cmbBuscarClientes.TabIndex = 0
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.DataGridView1)
+        Me.GroupBox3.Controls.Add(Me.dgvDetalles)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(491, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(469, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(391, 409)
+        Me.GroupBox3.Size = New System.Drawing.Size(413, 409)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detalles"
         '
-        'DataGridView1
+        'dgvDetalles
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 21)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(379, 382)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvDetalles.AllowUserToAddRows = False
+        Me.dgvDetalles.AllowUserToDeleteRows = False
+        Me.dgvDetalles.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDetalles.Location = New System.Drawing.Point(6, 21)
+        Me.dgvDetalles.Name = "dgvDetalles"
+        Me.dgvDetalles.ReadOnly = True
+        Me.dgvDetalles.RowTemplate.Height = 24
+        Me.dgvDetalles.Size = New System.Drawing.Size(400, 382)
+        Me.dgvDetalles.TabIndex = 0
         '
         'btnSalir
         '
@@ -447,7 +447,7 @@ Partial Class frmAlquilerRegistrar2
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDetalles, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.dgvPeliculas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -485,5 +485,5 @@ Partial Class frmAlquilerRegistrar2
     Friend WithEvents dgvPeliculas As System.Windows.Forms.DataGridView
     Friend WithEvents clmSeleccionarPelicula As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents btnAgregarADetalle As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvDetalles As System.Windows.Forms.DataGridView
 End Class
