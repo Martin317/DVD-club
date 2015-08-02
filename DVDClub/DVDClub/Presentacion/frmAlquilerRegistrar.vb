@@ -20,6 +20,8 @@
         Dim peliculas As New fPelicula
         dt = peliculas.mostrarDatos()
         dgvPeliculas.DataSource = dt
+        dgvPeliculas.Columns(1).Visible = False
+        dgvPeliculas.Columns(2).Width = 210
     End Sub
 
     Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
@@ -33,16 +35,23 @@
         Dim respuesta As Integer = MessageBox.Show("¿Desea registrar los datos del alquiler?", "Confirmacion de alquiler",
                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = MsgBoxResult.Yes Then
-            Dim clienteID As Integer = Convert.ToInt32(txtNumero.Text)
+            Dim cliente As New logCliente
+            cliente.gClienteID = Convert.ToInt32(txtNumero.Text)
+            Dim alquiler As New logAlquiler
+            alquiler.gCliente = cliente
+            alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy/mm/dd")
+            alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")  
+            'TODO Agregar datos de Sesion.
             Dim peliculasID As New List(Of Integer)
             For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
                 If dr.Cells(0).Value = True Then
                     peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
                 End If
             Next
-            MsgBox(peliculasID(0))
-            MsgBox(peliculasID(1))
-            ' alquiler.insertarAlquiler()
+            Dim funcAlquiler As New fAlquiler
+            funcAlquiler.insertarAlquiler(alquiler)
+            Dim peliculaEspecfica As New fPeliculaEspecifica
+            peliculaEspecfica.actualizarEstadoPelicula()
             'TODO Cambiar estado de cliente inactivo a activo.
 
         End If
@@ -118,5 +127,7 @@
             Next
             primeraVez = False
         End If
+        dgvDetalles.Columns(0).Width = 150
+        dgvDetalles.Columns(1).Width = 210
     End Sub
 End Class

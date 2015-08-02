@@ -1,9 +1,9 @@
-﻿Imports System.Data.SqlTypes.SqlDateTime
+﻿
 Public Class logAlquiler
     Dim alquilerID As Integer
     Dim cliente As logCliente
-    Dim fechaDevolucion, fechaEntrega As Date
-    Dim horaDevolucion, horaEntrega As SqlTypes.SqlDateTime
+    Dim fechaDevolucion, fechaEntrega As String
+    Dim horaDevolucion, horaEntrega As String
     'TODO revisar tipo de dato SQLDATATIME
     Dim sesion As logSesion
 
