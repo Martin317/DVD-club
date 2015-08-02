@@ -160,6 +160,12 @@
     <Compile Include="Presentacion\frmPeliculaNueva.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPeliculaNueva.resx">
       <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
