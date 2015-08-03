@@ -12,7 +12,8 @@ Public Class fDetalleAlquiler
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Connection = cnn
                 cmd.Parameters.AddWithValue("@Alquiler", idAlquiler)
-                cmd.Parameters.AddWithValue("@PeliculaEspecifica", idPeliculaEspecifica)
+                cmd.Parameters.AddWithValue("@IDPeliculaEspecifica", idPeliculaEspecifica)
+                cmd.ExecuteNonQuery()
             Next
         Catch ex As Exception
             MessageBox.Show("Atención: se ha generado un error tratando de registrar los detalles del alquiler." &

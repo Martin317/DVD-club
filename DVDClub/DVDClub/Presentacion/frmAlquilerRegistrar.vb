@@ -25,9 +25,33 @@
     End Sub
 
     Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
-        Dim peliculas As New fPelicula
-        dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
-        dgvPeliculas.DataSource = dt
+        Dim marcadas As New List(Of String)
+        If txtPeliculas.Text <> "" Then
+
+            For Each dr As DataGridViewRow In dgvPeliculas.Rows
+                If dr.Cells(1).Value = True Then
+                    marcadas.Add(Convert.ToInt32(dr.Cells(1).Value))
+                End If
+            Next
+            Dim peliculas As New fPelicula
+            dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
+            dgvPeliculas.DataSource = dt
+        Else
+            Dim marcadasBusqueda As New List(Of String)
+            For Each dr As DataGridViewRow In dgvPeliculas.Rows
+                If dr.Cells(1).Value = True Then
+                    marcadasBusqueda.Add(Convert.ToInt32(dr.Cells(1).Value))
+                End If
+            Next
+            funcMostrarPeliculas()
+            marcadasBusqueda.Union(marcadas)
+            For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
+                If marcadasBusqueda.Find(dr.Cells(1).Value) = dr.Cells(1).Value Then
+                    dr.Cells(0).Value = True
+                End If
+            Next
+        End If
+
 
         'TODO Cuando se selecciona una pelicula y se busca otra, se borra la seleccion ._.
     End Sub
@@ -46,8 +70,8 @@
             'alquiler
             Dim alquiler As New logAlquiler
             alquiler.gCliente = cliente
-            alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy-mm-dd")
-            alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")
+            alquiler.gFechaEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortDateString)
+            alquiler.gHoraEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortTimeString)
             alquiler.gSesion = sesion
             'peliculas
             Dim peliculasID As New List(Of Integer)
@@ -65,6 +89,7 @@
             'Actualizar estado del cliente a activo (si es necesario)
             Dim funcCliente As New fCliente
             funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
+            Me.Close()
         End If
     End Sub
 

@@ -14,6 +14,8 @@ Public Class fAlquiler
             cmd.Parameters.AddWithValue("@FechaEntrega", alquiler.gFechaEntrega)
             cmd.Parameters.AddWithValue("@HoraEntrega", alquiler.gHoraEntrega)
             cmd.Parameters.AddWithValue("@IDSesion", (alquiler.gSesion).gSesionID)
+            cmd.ExecuteNonQuery()
+
             'Insertar detalles
             'Traer id del ultimo alquiler insertado
             cmd = New SqlCommand

@@ -31,6 +31,7 @@ Public Class fCliente
             conectar()
             cmd = New SqlCommand
             'Traer estado del cliente con ese id
+            cmd.Connection = cnn
             cmd.CommandText = "SELECT cliente.estado FROM cliente WHERE cliente.cliente_id = ( '" & numero & "')"
             Dim dt As New DataTable
             If cmd.ExecuteNonQuery Then
@@ -47,7 +48,7 @@ Public Class fCliente
                 cmd.Parameters.AddWithValue("@IDCliente", numero)
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de registrar el alquiler." &
+            MessageBox.Show("Atención: se ha generado un error tratando de actualizar el estado del cliente." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally

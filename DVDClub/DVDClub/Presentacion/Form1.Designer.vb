@@ -25,6 +25,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarDevolucionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PeliculasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,9 +37,6 @@ Partial Class Form1
         Me.RegistrarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarDevolucionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,6 +69,25 @@ Partial Class Form1
         Me.MenuStrip1.Size = New System.Drawing.Size(540, 28)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem2, Me.RegistrarDevolucionToolStripMenuItem})
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(73, 24)
+        Me.ClientesToolStripMenuItem.Text = "Alquiler"
+        '
+        'RegistrarToolStripMenuItem2
+        '
+        Me.RegistrarToolStripMenuItem2.Name = "RegistrarToolStripMenuItem2"
+        Me.RegistrarToolStripMenuItem2.Size = New System.Drawing.Size(214, 24)
+        Me.RegistrarToolStripMenuItem2.Text = "Registrar alquiler"
+        '
+        'RegistrarDevolucionToolStripMenuItem
+        '
+        Me.RegistrarDevolucionToolStripMenuItem.Name = "RegistrarDevolucionToolStripMenuItem"
+        Me.RegistrarDevolucionToolStripMenuItem.Size = New System.Drawing.Size(214, 24)
+        Me.RegistrarDevolucionToolStripMenuItem.Text = "Registrar devolucion"
         '
         'PeliculasToolStripMenuItem
         '
@@ -124,25 +143,6 @@ Partial Class Form1
         Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
         Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(142, 24)
         Me.EliminarToolStripMenuItem1.Text = "Eliminar"
-        '
-        'ClientesToolStripMenuItem
-        '
-        Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem2, Me.RegistrarDevolucionToolStripMenuItem})
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(73, 24)
-        Me.ClientesToolStripMenuItem.Text = "Alquiler"
-        '
-        'RegistrarToolStripMenuItem2
-        '
-        Me.RegistrarToolStripMenuItem2.Name = "RegistrarToolStripMenuItem2"
-        Me.RegistrarToolStripMenuItem2.Size = New System.Drawing.Size(214, 24)
-        Me.RegistrarToolStripMenuItem2.Text = "Registrar alquiler"
-        '
-        'RegistrarDevolucionToolStripMenuItem
-        '
-        Me.RegistrarDevolucionToolStripMenuItem.Name = "RegistrarDevolucionToolStripMenuItem"
-        Me.RegistrarDevolucionToolStripMenuItem.Size = New System.Drawing.Size(214, 24)
-        Me.RegistrarDevolucionToolStripMenuItem.Text = "Registrar devolucion"
         '
         'SesionToolStripMenuItem
         '

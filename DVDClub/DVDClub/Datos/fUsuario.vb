@@ -42,6 +42,7 @@ Public Class fUsuario
             MessageBox.Show("Atención: se ha generado un error tratando acceder a la base de datos." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
         Finally
             desconectar()
         End Try

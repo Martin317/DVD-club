@@ -45,7 +45,7 @@ Partial Class Login
         'txtUsuario
         '
         Me.txtUsuario.Location = New System.Drawing.Point(209, 73)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(267, 22)
         Me.txtUsuario.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class Login
         'btnCerrar
         '
         Me.btnCerrar.Location = New System.Drawing.Point(307, 212)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(121, 43)
         Me.btnCerrar.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class Login
         'txtContraseña
         '
         Me.txtContraseña.Location = New System.Drawing.Point(209, 129)
-        Me.txtContraseña.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContraseña.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(267, 22)
@@ -82,7 +82,7 @@ Partial Class Login
         'btnIngresar
         '
         Me.btnIngresar.Location = New System.Drawing.Point(123, 212)
-        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(121, 43)
         Me.btnIngresar.TabIndex = 2
@@ -98,9 +98,9 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.txtUsuario)
         Me.GroupBox1.Controls.Add(Me.txtContraseña)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(551, 329)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
@@ -112,7 +112,7 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 358)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Login"
