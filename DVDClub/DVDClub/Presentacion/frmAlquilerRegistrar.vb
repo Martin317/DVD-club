@@ -56,10 +56,15 @@
 
             Dim funcAlquiler As New fAlquiler
             funcAlquiler.insertarAlquiler(alquiler)
+<<<<<<< HEAD
             Dim funcPeliculaEspecfica As New fPeliculaEspecifica
             funcPeliculaEspecfica.actualizarEstadoPelicula()
             Dim funcCliente As New fCliente
             funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
+=======
+            Dim peliculaEspecfica As New fPeliculaEspecifica
+            'peliculaEspecfica.actualizarEstadoPelicula()
+>>>>>>> origin/master
             'TODO Cambiar estado de cliente inactivo a activo.
 
         End If
