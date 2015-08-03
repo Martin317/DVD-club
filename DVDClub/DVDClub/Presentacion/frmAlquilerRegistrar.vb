@@ -37,40 +37,34 @@
                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = MsgBoxResult.Yes Then
             Dim cliente As New logCliente
+            Dim sesion As New logSesion
+            Dim funcSesion As New fSesion
+            'sesion
+            sesion = funcSesion.capturarSesionActual()
+            'cliente
             cliente.gClienteID = Convert.ToInt32(txtNumero.Text)
+            'alquiler
             Dim alquiler As New logAlquiler
             alquiler.gCliente = cliente
             alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy-mm-dd")
-            alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")  
-            'TODO Agregar datos de Sesion.
-            'TODO Agregar datos de Usuario
-            Dim usuario As New logUsuario
-            usuario.gApellido = "Brunori"
-            usuario.gNombre = "Martin"
-            usuario.gDni = 37127483
-            usuario.gNombreUsuario = "Martin316"
-            usuario.gContrasenia = "123"
-            Dim sesion As New logSesion
-            sesion.gUsuario = usuario
-            sesion.gFechaHoraInicioSesion = System.DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")
-            sesion.gFechaHoraCierreSesion = Nothing
+            alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")
             alquiler.gSesion = sesion
+            'peliculas
             Dim peliculasID As New List(Of Integer)
             For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
                 If dr.Cells(0).Value = True Then
                     peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
                 End If
             Next
-
+            'Insertar alquiler, con sus detalles.
             Dim funcAlquiler As New fAlquiler
             funcAlquiler.insertarAlquiler(alquiler)
-
+            'Actualizar estado de las peliculas especificas(ejemplares)
             Dim funcPeliculaEspecfica As New fPeliculaEspecifica
             funcPeliculaEspecfica.actualizarEstadoPelicula()
+            'Actualizar estado del cliente a activo (si es necesario)
             Dim funcCliente As New fCliente
             funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
-
-
         End If
     End Sub
 
