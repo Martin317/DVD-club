@@ -42,16 +42,24 @@
             alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy/mm/dd")
             alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")  
             'TODO Agregar datos de Sesion.
+            Dim usuario As logUsuario
+            Dim sesion As logSesion
+            sesion.gSesionID = 1
+            alquiler.gSesion = sesion
+
             Dim peliculasID As New List(Of Integer)
             For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
                 If dr.Cells(0).Value = True Then
                     peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
                 End If
             Next
+
             Dim funcAlquiler As New fAlquiler
             funcAlquiler.insertarAlquiler(alquiler)
-            Dim peliculaEspecfica As New fPeliculaEspecifica
-            peliculaEspecfica.actualizarEstadoPelicula()
+            Dim funcPeliculaEspecfica As New fPeliculaEspecifica
+            funcPeliculaEspecfica.actualizarEstadoPelicula()
+            Dim funcCliente As New fCliente
+            funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
             'TODO Cambiar estado de cliente inactivo a activo.
 
         End If

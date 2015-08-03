@@ -33,8 +33,6 @@ Public Class fAlquiler
             MessageBox.Show("Atención: se ha generado un error tratando de registrar el alquiler." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-
         Finally
             desconectar()
         End Try

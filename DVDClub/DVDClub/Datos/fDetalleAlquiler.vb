@@ -4,10 +4,10 @@ Public Class fDetalleAlquiler
     Dim cmd As SqlCommand
     Public Sub insertarDetalle(idAlquiler As Integer)
         Try
+            conectar()
             Dim idPeliculaEspecifica As Integer
             For Each row As DataGridViewRow In frmAlquilerRegistrar.dgvDetalles.Rows
                 idPeliculaEspecifica = row.Cells(0).Value
-                conectar()
                 cmd = New SqlCommand("procInsertarDetalle")
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Connection = cnn
