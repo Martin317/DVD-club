@@ -5,14 +5,23 @@
             MsgBox("¡Ningun campo puede estar vacio!", MsgBoxStyle.OkOnly, "Notificación")
         Else
             'TODO Comparar los textos usuario y contraseña con los de la tabla Usuarios de la BD
-            MsgBox("Ha ingresado correctamente a DVDClub", MsgBoxStyle.Exclamation, "Bienvenido!")
-            frmAlquilerRegistrar.Show()
+            Dim funcUsuario As New fUsuario
+            Dim usuario As New logUsuario
+            usuario.gNombreUsuario = txtUsuario.Text
+            usuario.gContrasenia = txtContraseña.Text
+            Dim correcto As Boolean = funcUsuario.comprobarDatos(usuario)
+            If correcto = True Then
+                frmAlquilerRegistrar.Show()
+                Me.Visible = False
+            Else
+                MsgBox("Usuario o contraseña incorrectos", MsgBoxStyle.Critical, "Error!")
+                txtContraseña.Clear()
+            End If
         End If
-        Me.Visible = False
-
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
     End Sub
+
 End Class

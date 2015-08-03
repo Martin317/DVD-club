@@ -22,11 +22,18 @@ Public Class fPelicula
         End Try
 
     End Sub
-    Public Sub modificarPelicula()
+    Public Sub modificarPelicula(pelicula As logPelicula)
         Try
             conectar()
+            cmd = New SqlCommand("procModificarPelicula")
+            cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
-            cmd.CommandText = "UPDATE Pelicula SET nombre=( '" & frmPeliculaModificar.txtNombre.Text & "'), idioma=( '" & frmPeliculaModificar.txtIdioma.Text & "'),genero=( '" & frmPeliculaModificar.txtGenero.Text & "'),fecha_lanzamiento=( '" & frmPeliculaModificar.dtpFechaLanzamiento.Text & "'),descripcion=( '" & frmPeliculaModificar.txtDescripcion.Text & "') WHERE pelicula_id=( '" & frmPeliculaModificar.intId & "')"
+            cmd.Parameters.AddWithValue("@Nombre", pelicula.gNombre)
+            cmd.Parameters.AddWithValue("@Idioma", pelicula.gIdioma)
+            cmd.Parameters.AddWithValue("@Genero", pelicula.gGenero)
+            cmd.Parameters.AddWithValue("@FechaLanzamiento", pelicula.gFechaLanzamiento)
+            cmd.Parameters.AddWithValue("@Descripcion", pelicula.gDescripcion)
+            cmd.Parameters.AddWithValue("@ID", pelicula.gPeliculaID)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             MessageBox.Show("Atención: se ha generado un error tratando de Actualizar la Pelicula." &
@@ -41,6 +48,7 @@ Public Class fPelicula
 
         Try
             conectar()
+            cmd = New SqlCommand
             cmd.Connection = cnn
             cmd.CommandText = "Select nombre as Pelicula, * from pelicula"
             If cmd.ExecuteNonQuery Then
@@ -53,7 +61,7 @@ Public Class fPelicula
                 Return Nothing
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar las peliculas." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing

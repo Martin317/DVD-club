@@ -1,7 +1,8 @@
-﻿Public Class logPelicula
+﻿Imports System.Data.SqlTypes.SqlDateTime
+Public Class logPelicula
     Dim peliculaID As Integer
     Dim nombre, idioma, genero, descripcion As String
-    Dim fechaLanzamiento As Date
+    Dim fechaLanzamiento As DateTime
 
     Public Property gPeliculaID
         Get

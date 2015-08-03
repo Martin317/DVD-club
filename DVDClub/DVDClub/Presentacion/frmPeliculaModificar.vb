@@ -48,17 +48,30 @@ Public Class frmPeliculaModificar
     End Sub
 
     Private Sub funcModificarPelicula()
-        Dim Pelicula As New fPelicula
-        Pelicula.modificarPelicula()
+        Dim pelicula As New logPelicula
+        pelicula.gNombre = txtNombre.Text
+        pelicula.gIdioma = txtIdioma.Text
+        pelicula.gGenero = txtGenero.Text
+        pelicula.gDescripcion = txtDescripcion.Text
+        dtpFechaLanzamiento.Format = DateTimePickerFormat.Custom
+        dtpFechaLanzamiento.CustomFormat = "yyyy-mm-dd"
+        pelicula.gFechaLanzamiento = Convert.ToDateTime(dtpFechaLanzamiento.Value)
+        Dim row As DataRowView = DirectCast(cmbPelicula.SelectedItem, DataRowView)
+        pelicula.gPeliculaID = row.Item("pelicula_id")
+        Dim funcPelicula As New fPelicula
+        funcPelicula.modificarPelicula(pelicula)
     End Sub
 
     Private Sub funcMostrarDatos()
-        Dim Datos As New fPelicula
-        cmbPelicula.DataSource = Datos.mostrarDatosPeliculas()
+        Dim funcPelicula As New fPelicula
+        Dim dt As DataTable = funcPelicula.mostrarDatosPeliculas()
+        cmbPelicula.DataSource = dt
         cmbPelicula.DisplayMember = "Pelicula"
         cmbPelicula.ValueMember = "pelicula_id"
     End Sub
-
-  
    
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
+
+    End Sub
 End Class

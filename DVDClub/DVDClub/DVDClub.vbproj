@@ -76,6 +76,7 @@
     <Compile Include="Datos\fDetalleAlquiler.vb" />
     <Compile Include="Datos\fPelicula.vb" />
     <Compile Include="Datos\fPeliculaEspecifica.vb" />
+    <Compile Include="Datos\fUsuario.vb" />
     <Compile Include="Logica\logAlquiler.vb" />
     <Compile Include="Logica\logCliente.vb" />
     <Compile Include="Logica\logDetalleAlquiler.vb" />
