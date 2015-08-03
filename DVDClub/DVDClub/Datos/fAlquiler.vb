@@ -13,7 +13,7 @@ Public Class fAlquiler
             cmd.Parameters.AddWithValue("@IDCliente", (alquiler.gCliente).gClienteID)
             cmd.Parameters.AddWithValue("@FechaEntrega", alquiler.gFechaEntrega)
             cmd.Parameters.AddWithValue("@HoraEntrega", alquiler.gHoraEntrega)
-
+            cmd.Parameters.AddWithValue("@IDSesion", (alquiler.gSesion).gSesionID)
             'Insertar detalles
             'Traer id del ultimo alquiler insertado
             cmd = New SqlCommand
@@ -21,7 +21,6 @@ Public Class fAlquiler
             cmd.CommandText = ("SELECT TOP 1 alquiler_id FROM alquiler ORDER BY alquiler_id DESC")
             Dim dt As New DataTable
             If cmd.ExecuteNonQuery Then
-
                 Dim da As New SqlDataAdapter(cmd)
                 da.SelectCommand = cmd
                 da.Fill(dt)

@@ -1,6 +1,6 @@
 ﻿Public Class logUsuario
     Dim usuarioID As Integer
-    Dim nombre, apellido, nombreUsuario As String
+    Dim nombre, apellido, nombreUsuario, contrasenia As String
     Dim dni As ULong
 
     Public Property gUsuarioID
@@ -52,4 +52,13 @@
         gNombreUsuario = nombreUsuario
         gDni = dni
     End Sub
+    Public Property gContrasenia
+        Get
+            Return contrasenia
+        End Get
+        Set(ByVal value)
+            contrasenia = value
+        End Set
+    End Property
+
 End Class

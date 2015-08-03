@@ -28,6 +28,7 @@
         Dim peliculas As New fPelicula
         dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
         dgvPeliculas.DataSource = dt
+
         'TODO Cuando se selecciona una pelicula y se busca otra, se borra la seleccion ._.
     End Sub
 
@@ -39,14 +40,21 @@
             cliente.gClienteID = Convert.ToInt32(txtNumero.Text)
             Dim alquiler As New logAlquiler
             alquiler.gCliente = cliente
-            alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy/mm/dd")
+            alquiler.gFechaEntrega = System.DateTime.Now.ToString("yyyy-mm-dd")
             alquiler.gHoraEntrega = System.DateTime.Now.ToString("hh:mm:ss")  
             'TODO Agregar datos de Sesion.
-            Dim usuario As logUsuario
-            Dim sesion As logSesion
-            sesion.gSesionID = 1
+            'TODO Agregar datos de Usuario
+            Dim usuario As New logUsuario
+            usuario.gApellido = "Brunori"
+            usuario.gNombre = "Martin"
+            usuario.gDni = 37127483
+            usuario.gNombreUsuario = "Martin316"
+            usuario.gContrasenia = "123"
+            Dim sesion As New logSesion
+            sesion.gUsuario = usuario
+            sesion.gFechaHoraInicioSesion = System.DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")
+            sesion.gFechaHoraCierreSesion = Nothing
             alquiler.gSesion = sesion
-
             Dim peliculasID As New List(Of Integer)
             For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
                 If dr.Cells(0).Value = True Then
@@ -56,16 +64,12 @@
 
             Dim funcAlquiler As New fAlquiler
             funcAlquiler.insertarAlquiler(alquiler)
-<<<<<<< HEAD
+
             Dim funcPeliculaEspecfica As New fPeliculaEspecifica
             funcPeliculaEspecfica.actualizarEstadoPelicula()
             Dim funcCliente As New fCliente
             funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
-=======
-            Dim peliculaEspecfica As New fPeliculaEspecifica
-            'peliculaEspecfica.actualizarEstadoPelicula()
->>>>>>> origin/master
-            'TODO Cambiar estado de cliente inactivo a activo.
+
 
         End If
     End Sub

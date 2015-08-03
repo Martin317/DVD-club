@@ -1,7 +1,7 @@
 ﻿Public Class logSesion
     Dim sesionID As Integer
     Dim usuario As logUsuario
-    Dim fechaHoraInicioSesion, fechaHoraCierreSesion As Date
+    Dim fechaHoraInicioSesion, fechaHoraCierreSesion As String
     'TODO Tipo de datos^^^^^^
 
     Public Property gSesionID

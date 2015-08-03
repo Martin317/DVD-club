@@ -15,7 +15,7 @@ Public Class fDetalleAlquiler
                 cmd.Parameters.AddWithValue("@PeliculaEspecifica", idPeliculaEspecifica)
             Next
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de registrar el alquiler." &
+            MessageBox.Show("Atención: se ha generado un error tratando de registrar los detalles del alquiler." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally

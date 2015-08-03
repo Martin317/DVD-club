@@ -51,3 +51,4 @@ C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPe
 C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmPeliculaNueva.resources
 C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.frmAlquilerRegistrar.resources
 C:\Users\andyd\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.Login.resources
+C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\obj\Debug\DVDClub.Login.resources
