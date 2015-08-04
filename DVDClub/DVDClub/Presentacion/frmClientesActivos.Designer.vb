@@ -28,29 +28,32 @@ Partial Class frmClientesActivos
         '
         'listClientesActivos
         '
-        Me.listClientesActivos.Location = New System.Drawing.Point(12, 12)
+        Me.listClientesActivos.Location = New System.Drawing.Point(16, 15)
+        Me.listClientesActivos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.listClientesActivos.Name = "listClientesActivos"
-        Me.listClientesActivos.Size = New System.Drawing.Size(487, 407)
+        Me.listClientesActivos.Size = New System.Drawing.Size(648, 500)
         Me.listClientesActivos.TabIndex = 0
         Me.listClientesActivos.UseCompatibleStateImageBehavior = False
         '
         'btnAtras
         '
-        Me.btnAtras.Location = New System.Drawing.Point(424, 428)
+        Me.btnAtras.Location = New System.Drawing.Point(565, 527)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(75, 23)
+        Me.btnAtras.Size = New System.Drawing.Size(100, 28)
         Me.btnAtras.TabIndex = 43
         Me.btnAtras.Text = "Atrás"
         Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'ClientesActivos
+        'frmClientesActivos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(511, 463)
+        Me.ClientSize = New System.Drawing.Size(681, 570)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.listClientesActivos)
-        Me.Name = "ClientesActivos"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "frmClientesActivos"
         Me.Text = "ClientesActivos"
         Me.ResumeLayout(False)
 
