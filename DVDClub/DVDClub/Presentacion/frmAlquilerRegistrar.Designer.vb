@@ -49,7 +49,6 @@ Partial Class frmAlquilerRegistrar
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnAgregarADetalle = New System.Windows.Forms.Button()
-        Me.btnBuscarPelicula = New System.Windows.Forms.Button()
         Me.txtPeliculas = New System.Windows.Forms.TextBox()
         Me.cmbPeliculas = New System.Windows.Forms.ComboBox()
         Me.dgvPeliculas = New System.Windows.Forms.DataGridView()
@@ -339,7 +338,6 @@ Partial Class frmAlquilerRegistrar
         '
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.btnAgregarADetalle)
-        Me.GroupBox2.Controls.Add(Me.btnBuscarPelicula)
         Me.GroupBox2.Controls.Add(Me.txtPeliculas)
         Me.GroupBox2.Controls.Add(Me.cmbPeliculas)
         Me.GroupBox2.Controls.Add(Me.dgvPeliculas)
@@ -366,33 +364,20 @@ Partial Class frmAlquilerRegistrar
         Me.btnAgregarADetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarADetalle.Image = Global.DVDClub.My.Resources.Resources.www
         Me.btnAgregarADetalle.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnAgregarADetalle.Location = New System.Drawing.Point(749, 10)
+        Me.btnAgregarADetalle.Location = New System.Drawing.Point(704, 21)
         Me.btnAgregarADetalle.Name = "btnAgregarADetalle"
-        Me.btnAgregarADetalle.Size = New System.Drawing.Size(115, 60)
+        Me.btnAgregarADetalle.Size = New System.Drawing.Size(159, 49)
         Me.btnAgregarADetalle.TabIndex = 3
         Me.btnAgregarADetalle.Text = "Agregar a detalle"
         Me.btnAgregarADetalle.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnAgregarADetalle.UseVisualStyleBackColor = True
-        '
-        'btnBuscarPelicula
-        '
-        Me.btnBuscarPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarPelicula.Image = Global.DVDClub.My.Resources.Resources.Buscar
-        Me.btnBuscarPelicula.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscarPelicula.Location = New System.Drawing.Point(640, 10)
-        Me.btnBuscarPelicula.Name = "btnBuscarPelicula"
-        Me.btnBuscarPelicula.Size = New System.Drawing.Size(103, 60)
-        Me.btnBuscarPelicula.TabIndex = 3
-        Me.btnBuscarPelicula.Text = "Buscar"
-        Me.btnBuscarPelicula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarPelicula.UseVisualStyleBackColor = True
         '
         'txtPeliculas
         '
         Me.txtPeliculas.Location = New System.Drawing.Point(219, 30)
         Me.txtPeliculas.MaxLength = 50
         Me.txtPeliculas.Name = "txtPeliculas"
-        Me.txtPeliculas.Size = New System.Drawing.Size(415, 22)
+        Me.txtPeliculas.Size = New System.Drawing.Size(479, 22)
         Me.txtPeliculas.TabIndex = 2
         '
         'cmbPeliculas
@@ -430,7 +415,7 @@ Partial Class frmAlquilerRegistrar
         Me.clmSeleccionarPelicula.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.clmSeleccionarPelicula.TrueValue = "True"
         '
-        'frmAlquilerRegistrar2
+        'frmAlquilerRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -442,7 +427,7 @@ Partial Class frmAlquilerRegistrar
         Me.Controls.Add(Me.btnSalir)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.Name = "frmAlquilerRegistrar2"
+        Me.Name = "frmAlquilerRegistrar"
         Me.Text = "frmAlquilerRegistrar2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -479,7 +464,6 @@ Partial Class frmAlquilerRegistrar
     Friend WithEvents checkBoxDeudor As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents btnBuscarPelicula As System.Windows.Forms.Button
     Friend WithEvents txtPeliculas As System.Windows.Forms.TextBox
     Friend WithEvents cmbPeliculas As System.Windows.Forms.ComboBox
     Friend WithEvents dgvPeliculas As System.Windows.Forms.DataGridView

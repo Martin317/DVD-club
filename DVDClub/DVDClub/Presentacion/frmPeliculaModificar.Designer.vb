@@ -22,6 +22,7 @@ Partial Class frmPeliculaModificar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dtpFechaLanzamiento = New System.Windows.Forms.DateTimePicker()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -38,8 +39,10 @@ Partial Class frmPeliculaModificar
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbPelicula = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.ErrProviderModificarPelicula = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrProviderModificarPelicula, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -210,6 +213,10 @@ Partial Class frmPeliculaModificar
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Pelicula:"
         '
+        'ErrProviderModificarPelicula
+        '
+        Me.ErrProviderModificarPelicula.ContainerControl = Me
+        '
         'frmPeliculaModificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -224,6 +231,7 @@ Partial Class frmPeliculaModificar
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ErrProviderModificarPelicula, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -243,4 +251,5 @@ Partial Class frmPeliculaModificar
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents cmbPelicula As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ErrProviderModificarPelicula As System.Windows.Forms.ErrorProvider
 End Class

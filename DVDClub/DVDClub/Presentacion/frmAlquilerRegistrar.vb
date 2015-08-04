@@ -15,7 +15,6 @@
         cmbBuscarClientes.DisplayMember = "Cliente"
         cmbBuscarClientes.ValueMember = "cliente_id"
     End Sub
-
     Private Sub funcMostrarPeliculas()
         Dim peliculas As New fPelicula
         dt = peliculas.mostrarDatos()
@@ -23,39 +22,31 @@
         dgvPeliculas.Columns(1).Visible = False
         dgvPeliculas.Columns(2).Width = 210
     End Sub
-
-    Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs) Handles btnBuscarPelicula.Click
-        Dim marcadas As New List(Of String)
-        If txtPeliculas.Text <> "" Then
-
-            For Each dr As DataGridViewRow In dgvPeliculas.Rows
-                If dr.Cells(1).Value = True Then
-                    marcadas.Add(Convert.ToInt32(dr.Cells(1).Value))
-                End If
-            Next
-            Dim peliculas As New fPelicula
-            dt = peliculas.filtrar(cmbPeliculas.SelectedIndex, txtPeliculas.Text)
-            dgvPeliculas.DataSource = dt
-        Else
-            Dim marcadasBusqueda As New List(Of String)
-            For Each dr As DataGridViewRow In dgvPeliculas.Rows
-                If dr.Cells(1).Value = True Then
-                    marcadasBusqueda.Add(Convert.ToInt32(dr.Cells(1).Value))
-                End If
-            Next
-            funcMostrarPeliculas()
-            marcadasBusqueda.Union(marcadas)
-            For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
-                If marcadasBusqueda.Find(dr.Cells(1).Value) = dr.Cells(1).Value Then
-                    dr.Cells(0).Value = True
-                End If
-            Next
-        End If
-
-
+    Private Sub btnBuscarPelicula_Click(sender As Object, e As EventArgs)
+        buscarDatos()
         'TODO Cuando se selecciona una pelicula y se busca otra, se borra la seleccion ._.
     End Sub
-
+    Private Sub buscarDatos()
+        Try
+            Dim ds As New DataSet 'Representa una memoria caché de datos en memoria.
+            ds.Tables.Add(dt.Copy) 'Se realiza una copia de la tabla en memoria.
+            Dim dv As New DataView(ds.Tables(0))
+            'DataView representa una vista personalizada que puede enlazar datos de un DataTable para ordenación, filtrado, búsqueda, edición y navegación. 
+            'El DataView no almacena datos, sino que representa una vista conectada al DataTable correspondiente. Los cambios en los datos de DataView afectarán a DataTable. 
+            'Los cambios en los datos de DataTable afectarán a toda los DataView asociados a él.
+            dv.RowFilter = cmbPeliculas.Text & " LIKE '%" & txtPeliculas.Text & "%'"
+            dv.RowFilter = cmbPeliculas.Text & " LIKE '%" & txtPeliculas.Text & "%'"
+            If dv.Count <> 0 Then
+                dgvPeliculas.DataSource = dv
+            Else
+                dgvPeliculas.DataSource = Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de buscar los tipos de sorteo." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
         Dim respuesta As Integer = MessageBox.Show("¿Desea registrar los datos del alquiler?", "Confirmacion de alquiler",
                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -92,11 +83,9 @@
             Me.Close()
         End If
     End Sub
-
     Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
         frmClienteNuevo.ShowDialog()
     End Sub
-
     Private Sub btnModificarCliente_Click(sender As Object, e As EventArgs) Handles btnModificarCliente.Click
         frmClienteModificar.ShowDialog()
     End Sub
@@ -104,7 +93,6 @@
         Me.Close()
 
     End Sub
-
     'Llenar textboxs
     Private Sub cmbBuscarClientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBuscarClientes.SelectedIndexChanged
         Dim row As DataRowView = DirectCast(cmbBuscarClientes.SelectedItem, DataRowView)
@@ -133,7 +121,6 @@
             End If
         End If
     End Sub
-
     'Funcion que inserta un ejemplar disponible de cada pelicula seleccionada en el dgvDetalles
     Private Sub btnAgregarADetalle_Click(sender As Object, e As EventArgs) Handles btnAgregarADetalle.Click
         If primeraVez = True Then
@@ -165,5 +152,13 @@
         End If
         dgvDetalles.Columns(0).Width = 150
         dgvDetalles.Columns(1).Width = 210
+    End Sub
+    Private Sub txtPeliculas_TextChanged(sender As Object, e As EventArgs) Handles txtPeliculas.TextChanged
+        buscarDatos()
+        If dgvPeliculas.RowCount <> 0 Then
+            dgvPeliculas.Columns("Numero de pelicula").Visible = False
+            dgvPeliculas.Columns(2).Width = 210
+        End If
+
     End Sub
 End Class

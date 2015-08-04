@@ -12,7 +12,6 @@ Public Class frmPeliculaModificar
     Private Sub PeliculaModificar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         funcMostrarDatos()
     End Sub
-
     Private Sub cmbPelicula_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPelicula.SelectedIndexChanged
         'Cuando cambia el objeto seleccionado del ComboBox, se actualizan los datos de los TextBox correspondientes
 
@@ -24,29 +23,21 @@ Public Class frmPeliculaModificar
         txtDescripcion.Text = row.Item("descripcion").ToString
         intId = row.Item("pelicula_id").ToString
     End Sub
-
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-
-    
         'Actualizacion de los valores en la BD de el elemento seleccionado en el ComboBox
         If txtNombre.Text = "" Then
-            MsgBox("El campo Nombre no puede estar Vacío", MsgBoxStyle.OkOnly)
+            ErrProviderModificarPelicula.SetError(txtNombre, "El campo Nombre no puede estar Vacío")
+        ElseIf txtIdioma.Text = "" Then
+            ErrProviderModificarPelicula.SetError(txtIdioma, "El campo idioma no puede estar Vacío")
+        ElseIf txtGenero.Text = "" Then
+            ErrProviderModificarPelicula.SetError(txtGenero, "El campo genero no puede estar Vacío")
         Else
-            If txtIdioma.Text = "" Then
-                MsgBox("El campo Idioma no puede estar Vacío", MsgBoxStyle.OkOnly)
-            Else
-                If txtGenero.Text = "" Then
-                    MsgBox("El campo Genero no puede estar Vacío", MsgBoxStyle.OkOnly)
-                Else
-                    funcModificarPelicula()
-                End If
-            End If
+            funcModificarPelicula()
         End If
 
-        MsgBox("¡Se modificaron los datos exitosamente!", MsgBoxStyle.OkOnly, "Notificación")
+
 
     End Sub
-
     Private Sub funcModificarPelicula()
         Dim pelicula As New logPelicula
         pelicula.gNombre = txtNombre.Text
@@ -59,17 +50,18 @@ Public Class frmPeliculaModificar
         Dim row As DataRowView = DirectCast(cmbPelicula.SelectedItem, DataRowView)
         pelicula.gPeliculaID = row.Item("pelicula_id")
         Dim funcPelicula As New fPelicula
-        funcPelicula.modificarPelicula(pelicula)
+        Dim ejecutado As Boolean = funcPelicula.modificarPelicula(pelicula)
+        If ejecutado = True Then
+            MessageBox.Show("Pelicula modificada con Éxito!", "Modificar pelicula", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
-
     Private Sub funcMostrarDatos()
         Dim funcPelicula As New fPelicula
         Dim dt As DataTable = funcPelicula.mostrarDatosPeliculas()
         cmbPelicula.DataSource = dt
-        cmbPelicula.DisplayMember = "Pelicula"
+        cmbPelicula.DisplayMember = "nombre"
         cmbPelicula.ValueMember = "pelicula_id"
     End Sub
-   
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
 

@@ -3,26 +3,33 @@
 Public Class fPelicula
     Inherits Conexion
     Dim cmd As SqlCommand
-    Public Sub insertarPelicula()
+    Public Function insertarPelicula(pelicula As logPelicula) As Boolean
         Try
-
             conectar()
-            cmd.CommandText = "insert into Pelicula (nombre, idioma, genero, fecha_lanzamiento, descripcion) Values ( '" & frmPeliculaNueva.txtNombre.Text & "',  '" & frmPeliculaNueva.txtIdioma.Text & "',  '" & frmPeliculaNueva.txtGenero.Text & "',  '" & frmPeliculaNueva.dtpFechaLanzamiento.Text & "',  '" & frmPeliculaNueva.txtGenero.Text & "')"
+            cmd = New SqlCommand("procInsertarPelicula")
             cmd.Connection = cnn
-            cmd.ExecuteNonQuery()
-            MsgBox("Pelicula Registrado con Éxito!", MsgBoxStyle.OkOnly)
+            cmd.Parameters.AddWithValue("@Nombre", pelicula.gNombre)
+            cmd.Parameters.AddWithValue("@Idioma", pelicula.gIdioma)
+            cmd.Parameters.AddWithValue("@Genero", pelicula.gGenero)
+            cmd.Parameters.AddWithValue("@FechaLanzamiento", pelicula.gFechaLanzamiento)
+            cmd.Parameters.AddWithValue("@Descripcion", pelicula.gDescripcion)
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
 
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de registrar una nueva pelicula." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+            Return Nothing
         Finally
             desconectar()
         End Try
 
-    End Sub
-    Public Sub modificarPelicula(pelicula As logPelicula)
+    End Function
+    Public Function modificarPelicula(pelicula As logPelicula) As Boolean
         Try
             conectar()
             cmd = New SqlCommand("procModificarPelicula")
@@ -34,23 +41,26 @@ Public Class fPelicula
             cmd.Parameters.AddWithValue("@FechaLanzamiento", pelicula.gFechaLanzamiento)
             cmd.Parameters.AddWithValue("@Descripcion", pelicula.gDescripcion)
             cmd.Parameters.AddWithValue("@ID", pelicula.gPeliculaID)
-            cmd.ExecuteNonQuery()
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
         Catch ex As Exception
             MessageBox.Show("Atención: se ha generado un error tratando de Actualizar la Pelicula." &
               Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
               MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
         Finally
             desconectar()
         End Try
 
-    End Sub
+    End Function
     Public Function mostrarDatosPeliculas() As DataTable
-
         Try
             conectar()
-            cmd = New SqlCommand
+            cmd = New SqlCommand("procMostraPeliculasCombo")
             cmd.Connection = cnn
-            cmd.CommandText = "Select nombre as Pelicula, * from pelicula"
             If cmd.ExecuteNonQuery Then
                 Dim dt As New DataTable
                 Dim da As New SqlDataAdapter(cmd)
@@ -110,7 +120,7 @@ Public Class fPelicula
                 Return Nothing
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar las peliculas." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
@@ -118,63 +128,28 @@ Public Class fPelicula
             desconectar()
         End Try
     End Function
-    Public Function filtrar(ByVal index As Integer, ByVal text As String) As DataTable
+    Public Function bajaPelicula(idPelicula As Integer) As Boolean
         Try
             conectar()
-            Select Case index
-                Case 0
-                    cmd = New SqlCommand("procFiltrarPeliculasNombre")
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Connection = cnn
-                    cmd.Parameters.AddWithValue("@Nombre", "%" + text + "%")
-
-                    If cmd.ExecuteNonQuery Then
-                        Dim dt As New DataTable
-                        Dim da As New SqlDataAdapter(cmd)
-                        da.Fill(dt)
-                        Return dt
-                    Else
-                        Return Nothing
-                    End If
-                Case 1
-                    cmd = New SqlCommand("procFiltrarPeliculasGenero")
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Connection = cnn
-                    cmd.Parameters.AddWithValue("@Genero", "%" + text + "%")
-
-                    If cmd.ExecuteNonQuery Then
-                        Dim dt As New DataTable
-                        Dim da As New SqlDataAdapter(cmd)
-                        da.Fill(dt)
-                        Return dt
-                    Else
-                        Return Nothing
-                    End If
-                Case 2
-                    cmd = New SqlCommand("procFiltrarPeliculasIdioma")
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Connection = cnn
-                    cmd.Parameters.AddWithValue("@Idioma", "%" + text + "%")
-
-                    If cmd.ExecuteNonQuery Then
-                        Dim dt As New DataTable
-                        Dim da As New SqlDataAdapter(cmd)
-                        da.Fill(dt)
-                        Return dt
-                    Else
-                        Return Nothing
-                    End If
-                Case Else
-                    Return Nothing
-            End Select
+            cmd = New SqlCommand("procBajaPelicula")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("IDPelicula", idPelicula)
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
-                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar las peliculas." &
+                         Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                         MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
         Finally
             desconectar()
         End Try
+
     End Function
+   
 
 End Class
