@@ -40,4 +40,8 @@
     Private Sub BajaClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaClienteToolStripMenuItem.Click
         frmClientesActivos.ShowDialog()
     End Sub
+
+    Private Sub BajaClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaClientesToolStripMenuItem.Click
+        frmClienteBaja.ShowDialog()
+    End Sub
 End Class

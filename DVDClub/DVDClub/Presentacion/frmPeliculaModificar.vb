@@ -32,8 +32,11 @@ Public Class frmPeliculaModificar
         ElseIf txtGenero.Text = "" Then
             ErrProviderModificarPelicula.SetError(txtGenero, "El campo genero no puede estar Vacío")
         Else
-            funcModificarPelicula()
-        End If
+            Dim respuesta As MsgBoxResult = MessageBox.Show("¿Está seguro que desea modificar la pelicula?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If respuesta = MsgBoxResult.Yes Then
+                funcModificarPelicula()
+            End If
+            End If
 
 
 

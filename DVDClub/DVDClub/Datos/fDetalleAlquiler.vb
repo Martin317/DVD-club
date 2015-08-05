@@ -22,7 +22,6 @@ Public Class fDetalleAlquiler
         Finally
             desconectar()
         End Try
-
     End Sub
 
 End Class
