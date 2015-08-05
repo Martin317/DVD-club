@@ -31,4 +31,26 @@ Public Class fSesion
         End Try
 
     End Function
+    Public Function cerrarSesion(sesionActual As logSesion) As Boolean
+        Try
+
+            sesionActual.gFechaHoraCierreSesion = Convert.ToDateTime(DateAndTime.Now)
+            conectar()
+            cmd = New SqlCommand
+            cmd.Connection = cnn
+            cmd.CommandText = "UPDATE sesion SET sesion.fecha_hora_cierre_sesion= ( '" & sesionActual.gFechaHoraCierreSesion & "') WHERE sesion.sesion_id = ( '" & sesionActual.gSesionID & "')"
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de registrar la sesion actual." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class

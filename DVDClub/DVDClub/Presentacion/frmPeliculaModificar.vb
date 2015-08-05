@@ -37,9 +37,6 @@ Public Class frmPeliculaModificar
                 funcModificarPelicula()
             End If
             End If
-
-
-
     End Sub
     Private Sub funcModificarPelicula()
         Dim pelicula As New logPelicula
@@ -61,12 +58,15 @@ Public Class frmPeliculaModificar
     Private Sub funcMostrarDatos()
         Dim funcPelicula As New fPelicula
         Dim dt As DataTable = funcPelicula.mostrarDatosPeliculas()
-        cmbPelicula.DataSource = dt
-        cmbPelicula.DisplayMember = "Cliente"
-        cmbPelicula.ValueMember = "pelicula_id"
+        If dt.Rows.Count > 0 Then
+            cmbPelicula.DataSource = dt
+            cmbPelicula.DisplayMember = "Cliente"
+            cmbPelicula.ValueMember = "pelicula_id"
+        Else
+            MessageBox.Show("No hay peliculas disponibles", "Peliculas", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
-
     End Sub
 End Class

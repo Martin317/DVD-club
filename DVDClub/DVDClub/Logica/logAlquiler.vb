@@ -4,7 +4,7 @@ Public Class logAlquiler
     Dim cliente As logCliente
     Dim fechaDevolucion, fechaEntrega As DateTime
     Dim horaDevolucion, horaEntrega As DateTime
-    'TODO revisar tipo de dato SQLDATATIME
+
     Dim sesion As logSesion
 
     Public Property gAlquilerID
@@ -63,7 +63,6 @@ Public Class logAlquiler
             sesion = value
         End Set
     End Property
-
     Public Sub New()
 
     End Sub

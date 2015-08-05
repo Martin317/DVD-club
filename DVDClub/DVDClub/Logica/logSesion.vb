@@ -2,7 +2,6 @@
     Dim sesionID As Integer
     Dim usuario As logUsuario
     Dim fechaHoraInicioSesion, fechaHoraCierreSesion As DateTime
-    'TODO Tipo de datos^^^^^^
 
     Public Property gSesionID
         Get

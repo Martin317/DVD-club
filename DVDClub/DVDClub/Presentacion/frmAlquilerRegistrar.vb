@@ -130,28 +130,30 @@
                     peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
                 End If
             Next
-            Dim num As Integer
-            Dim peliculas As New fPelicula
-            Dim dtTemp As New DataTable
-            For Each num In peliculasID
-                dt = peliculas.mostrarEjemplaresDisponibles(num)
-                dtTemp = TryCast(dgvDetalles.DataSource, DataTable)
-                If Not (dtTemp Is Nothing) Then
-                    For Each row As DataRow In dtTemp.Rows
-                        dt.ImportRow(row)
-                    Next
-                    dgvDetalles.DataSource = dt
-                    dgvPeliculas.Refresh()
-                Else
-                    dgvDetalles.DataSource = dt
-                    dgvPeliculas.Refresh()
-                End If
-                'TODO cambiar estado del ejemplar a no disponible
-            Next
-            primeraVez = False
+            If peliculasID.Count > 0 Then
+                Dim num As Integer
+                Dim peliculas As New fPelicula
+                Dim dtTemp As New DataTable
+                For Each num In peliculasID
+                    dt = peliculas.mostrarEjemplaresDisponibles(num)
+                    dtTemp = TryCast(dgvDetalles.DataSource, DataTable)
+                    If Not (dtTemp Is Nothing) Then
+                        For Each row As DataRow In dtTemp.Rows
+                            dt.ImportRow(row)
+                        Next
+                        dgvDetalles.DataSource = dt
+                        dgvPeliculas.Refresh()
+                    Else
+                        dgvDetalles.DataSource = dt
+                        dgvPeliculas.Refresh()
+                    End If
+                    'TODO cambiar estado del ejemplar a no disponible
+                Next
+                primeraVez = False
+                dgvDetalles.Columns(0).Width = 150
+                dgvDetalles.Columns(1).Width = 210
+            End If
         End If
-        dgvDetalles.Columns(0).Width = 150
-        dgvDetalles.Columns(1).Width = 210
     End Sub
     Private Sub txtPeliculas_TextChanged(sender As Object, e As EventArgs) Handles txtPeliculas.TextChanged
         buscarDatos()

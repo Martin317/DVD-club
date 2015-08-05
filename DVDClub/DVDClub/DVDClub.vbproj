@@ -150,6 +150,24 @@
     <Compile Include="Presentacion\frmPeliculaBaja.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmPeliculaConsultar.Designer.vb">
+      <DependentUpon>frmPeliculaConsultar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPeliculaConsultar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPeliculaEspecificaBaja.Designer.vb">
+      <DependentUpon>frmPeliculaEspecificaBaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPeliculaEspecificaBaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPeliculaEspecificaRegistrar.Designer.vb">
+      <DependentUpon>frmPeliculaEspecificaRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPeliculaEspecificaRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmPeliculaModificar.Designer.vb">
       <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </Compile>
@@ -199,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPeliculaBaja.resx">
       <DependentUpon>frmPeliculaBaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmPeliculaConsultar.resx">
+      <DependentUpon>frmPeliculaConsultar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmPeliculaEspecificaBaja.resx">
+      <DependentUpon>frmPeliculaEspecificaBaja.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPeliculaModificar.resx">
       <DependentUpon>frmPeliculaModificar.vb</DependentUpon>

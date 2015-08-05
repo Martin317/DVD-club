@@ -4,12 +4,7 @@ Imports System.Data.SqlClient
 Public Class frmPeliculaNueva
     Dim cmd As SqlCommand
 
-    'se le pasa a la variable conexion el String de conexion de nuestra BD
-    'Dim conexion As New SqlConnection("String de Conexion;")
-
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs)
-        'comprobacion de campos y guardado de pelicula en la BD
-
         If txtNombre.Text = "" Then
             ErrProviderPeliculaNueva.SetError(txtNombre, "El campo Nombre no puede estar Vacío")
             txtNombre.Focus()
@@ -27,10 +22,6 @@ Public Class frmPeliculaNueva
             End If
         End If
     End Sub
-
-
-    
-
     Private Sub funcInsertarPelicula()
         Dim pelicula As New logPelicula
         pelicula.gNombre = txtNombre.Text
@@ -44,14 +35,13 @@ Public Class frmPeliculaNueva
             MessageBox.Show("Pelicula registrada con Éxito!", "Nueva pelicula", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
-
-  
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
-
- 
     Private Sub frmPeliculaNueva_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpFechaLanzamiento.Value = DateTime.Now.Date
+    End Sub
+    Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
     End Sub
 End Class

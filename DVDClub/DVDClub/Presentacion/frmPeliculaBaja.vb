@@ -25,7 +25,7 @@ Public Class frmPeliculaBaja
         cmbPelicula.DataSource = dt
         cmbPelicula.DisplayMember = "nombre"
         cmbPelicula.ValueMember = "pelicula_id"
-        'TODO cambiar en la ERS que da de baja todos los ejemplares de la pelicula, y no la pelicula en si.
+
     End Sub
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         Me.Close()

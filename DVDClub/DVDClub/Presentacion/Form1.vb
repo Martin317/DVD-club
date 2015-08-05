@@ -1,8 +1,5 @@
 ﻿Public Class Form1
 
- 
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmAlquilerRegistrar.ShowDialog()
 
@@ -29,8 +26,17 @@
     End Sub
 
     Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
-        Me.Close()
-        Login.Close()
+        Dim funcSesion As New fSesion
+        Dim sesionActual As logSesion = funcSesion.capturarSesionActual()
+        If funcSesion.cerrarSesion(sesionActual) = True Then
+            MessageBox.Show("Usted ha cerrado sesion", "Sesion",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+        Else
+            MessageBox.Show("Hemos tenido un problema al cerrar sesion", "Sesion",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
@@ -43,5 +49,9 @@
 
     Private Sub BajaClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaClientesToolStripMenuItem.Click
         frmClienteBaja.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem1.Click
+        frmPeliculaConsultar.ShowDialog()
     End Sub
 End Class

@@ -3,13 +3,20 @@
     Private Sub frmClienteConsultar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim funcClientes As New fCliente
         Dim dt As DataTable = funcClientes.mostrarDatos()
-        cmbCliente.DataSource = dt
-        cmbCliente.DisplayMember = "Cliente"
-        cmbCliente.ValueMember = "cliente_id"
-        If cmbCliente.Items.Count > 0 Then
-            cmbCliente.SelectedIndex = 1
+        If dt.Rows.Count > 0 Then
+            cmbCliente.DataSource = dt
+            cmbCliente.DisplayMember = "Cliente"
+            cmbCliente.ValueMember = "cliente_id"
+            If cmbCliente.Items.Count > 0 Then
+                cmbCliente.SelectedIndex = 1
+            End If
+            llenarTextBox()
+        Else
+            MessageBox.Show("No hay clientes disponibles", "Clientes", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Close()
         End If
-        llenarTextBox()
+
+
     End Sub
     Private Sub cmbCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCliente.SelectedIndexChanged
         llenarTextBox()

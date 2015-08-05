@@ -15,7 +15,6 @@ Public Class Conexion
             Return False
         End Try
     End Function
-
     Protected Function desconectar()
         Try
             If cnn.State = ConnectionState.Open Then

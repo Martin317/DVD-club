@@ -44,13 +44,14 @@ Partial Class Form1
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(117, 247)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 19)
         Me.Button1.TabIndex = 0
@@ -60,7 +61,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(211, 258)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(56, 19)
         Me.Button2.TabIndex = 1
@@ -98,7 +99,7 @@ Partial Class Form1
         '
         'PeliculasToolStripMenuItem
         '
-        Me.PeliculasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.ToolStripMenuItem1, Me.EjemplaresToolStripMenuItem})
+        Me.PeliculasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.ConsultarToolStripMenuItem1, Me.EliminarToolStripMenuItem, Me.ToolStripMenuItem1, Me.EjemplaresToolStripMenuItem})
         Me.PeliculasToolStripMenuItem.Name = "PeliculasToolStripMenuItem"
         Me.PeliculasToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.PeliculasToolStripMenuItem.Text = "Peliculas"
@@ -106,31 +107,31 @@ Partial Class Form1
         'RegistrarToolStripMenuItem
         '
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
         '
         'EjemplaresToolStripMenuItem
         '
         Me.EjemplaresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem1, Me.ModificarToolStripMenuItem1, Me.EliminarToolStripMenuItem1})
         Me.EjemplaresToolStripMenuItem.Name = "EjemplaresToolStripMenuItem"
-        Me.EjemplaresToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.EjemplaresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EjemplaresToolStripMenuItem.Text = "Ejemplares"
         '
         'RegistrarToolStripMenuItem1
@@ -195,6 +196,12 @@ Partial Class Form1
         Me.BajaClientesToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.BajaClientesToolStripMenuItem.Text = "Eliminar"
         '
+        'ConsultarToolStripMenuItem1
+        '
+        Me.ConsultarToolStripMenuItem1.Name = "ConsultarToolStripMenuItem1"
+        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem1.Text = "Consultar"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,5 +241,6 @@ Partial Class Form1
     Friend WithEvents BajaClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BajaClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class
