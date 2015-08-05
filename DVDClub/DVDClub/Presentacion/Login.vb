@@ -12,8 +12,10 @@
  
 
     Private Sub ingresar()
-        If txtContraseña.Text = "" Or txtUsuario.Text = "" Then
-            MsgBox("¡Ningun campo puede estar vacio!", MsgBoxStyle.OkOnly, "Notificación")
+        If txtUsuario.Text = "" Then
+            ErrProviderLogin.SetError(txtUsuario, "Debe ingresar un usuario")
+        ElseIf txtContraseña.Text = "" Then
+            ErrProviderLogin.SetError(txtContraseña, "Debe ingresar una contraseña")
         Else
             'TODO Comparar los textos usuario y contraseña con los de la tabla Usuarios de la BD
             Dim funcUsuario As New fUsuario
@@ -46,4 +48,5 @@
             ingresar()
         End If
     End Sub
+
 End Class

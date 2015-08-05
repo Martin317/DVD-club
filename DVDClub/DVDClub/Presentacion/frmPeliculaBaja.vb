@@ -11,7 +11,7 @@ Public Class frmPeliculaBaja
         'intID = row.Item("pelicula_id").ToString
         Dim row As DataRowView = DirectCast(cmbPelicula.SelectedItem, DataRowView)
     End Sub
-    Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnDarDeBaja.Click
+    Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
         Dim funcPelicula As New fPelicula
         Dim idPelicula As Integer = cmbPelicula.SelectedValue
         If funcPelicula.bajaPelicula(idPelicula) Then
@@ -25,6 +25,7 @@ Public Class frmPeliculaBaja
         cmbPelicula.DataSource = dt
         cmbPelicula.DisplayMember = "nombre"
         cmbPelicula.ValueMember = "pelicula_id"
+        'TODO cambiar en la ERS que da de baja todos los ejemplares de la pelicula, y no la pelicula en si.
     End Sub
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         Me.Close()

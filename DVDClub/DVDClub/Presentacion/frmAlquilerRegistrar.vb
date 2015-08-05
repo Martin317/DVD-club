@@ -8,9 +8,9 @@
         primeraVez = True
         dgvDetalles.DataSource = Nothing
     End Sub
-    Private Sub funcMostrarClientes()
-        Dim clientes As New fCliente
-        dt = clientes.mostrarDatos()
+    Public Sub funcMostrarClientes()
+        Dim funcClientes As New fCliente
+        dt = funcClientes.mostrarDatos()
         cmbBuscarClientes.DataSource = dt
         cmbBuscarClientes.DisplayMember = "Cliente"
         cmbBuscarClientes.ValueMember = "cliente_id"

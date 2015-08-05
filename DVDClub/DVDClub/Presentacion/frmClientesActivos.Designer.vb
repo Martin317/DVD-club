@@ -22,42 +22,68 @@ Partial Class frmClientesActivos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.listClientesActivos = New System.Windows.Forms.ListView()
         Me.btnAtras = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
+        Me.lstClientesActivos = New System.Windows.Forms.ListBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'listClientesActivos
-        '
-        Me.listClientesActivos.Location = New System.Drawing.Point(16, 15)
-        Me.listClientesActivos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.listClientesActivos.Name = "listClientesActivos"
-        Me.listClientesActivos.Size = New System.Drawing.Size(648, 500)
-        Me.listClientesActivos.TabIndex = 0
-        Me.listClientesActivos.UseCompatibleStateImageBehavior = False
         '
         'btnAtras
         '
-        Me.btnAtras.Location = New System.Drawing.Point(565, 527)
-        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAtras.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAtras.Location = New System.Drawing.Point(518, 515)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(100, 28)
+        Me.btnAtras.Size = New System.Drawing.Size(147, 45)
         Me.btnAtras.TabIndex = 43
         Me.btnAtras.Text = "Atrás"
         Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lstClientesActivos)
+        Me.GroupBox1.Controls.Add(Me.VScrollBar1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(653, 496)
+        Me.GroupBox1.TabIndex = 44
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Clientes activos"
+        '
+        'VScrollBar1
+        '
+        Me.VScrollBar1.Location = New System.Drawing.Point(629, 18)
+        Me.VScrollBar1.Name = "VScrollBar1"
+        Me.VScrollBar1.Size = New System.Drawing.Size(21, 475)
+        Me.VScrollBar1.TabIndex = 1
+        '
+        'lstClientesActivos
+        '
+        Me.lstClientesActivos.FormattingEnabled = True
+        Me.lstClientesActivos.ItemHeight = 16
+        Me.lstClientesActivos.Location = New System.Drawing.Point(0, 18)
+        Me.lstClientesActivos.Name = "lstClientesActivos"
+        Me.lstClientesActivos.Size = New System.Drawing.Size(626, 468)
+        Me.lstClientesActivos.TabIndex = 2
         '
         'frmClientesActivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 570)
+        Me.ClientSize = New System.Drawing.Size(681, 575)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnAtras)
-        Me.Controls.Add(Me.listClientesActivos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClientesActivos"
         Me.Text = "ClientesActivos"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents listClientesActivos As System.Windows.Forms.ListView
     Friend WithEvents btnAtras As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents VScrollBar1 As System.Windows.Forms.VScrollBar
+    Friend WithEvents lstClientesActivos As System.Windows.Forms.ListBox
 End Class

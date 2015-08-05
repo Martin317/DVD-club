@@ -1,6 +1,6 @@
 ﻿Public Class logCliente
     Dim nombre, apellido, direccion, email As String
-    Dim telefono, dni As ULong
+    Dim telefono, dni As Int64
     Dim dadoDeBaja, esDeudor As Boolean
     Dim estado As logEstado
     Dim fechaDeAlta As Date

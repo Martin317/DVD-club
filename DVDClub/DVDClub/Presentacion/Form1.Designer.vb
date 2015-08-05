@@ -40,6 +40,10 @@ Partial Class Form1
         Me.SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BajaClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BajaClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +67,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.PeliculasToolStripMenuItem, Me.SesionToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.PeliculasToolStripMenuItem, Me.SesionToolStripMenuItem, Me.ClientesToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(540, 28)
@@ -99,31 +103,31 @@ Partial Class Form1
         'RegistrarToolStripMenuItem
         '
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(151, 24)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(151, 24)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(151, 24)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(148, 6)
         '
         'EjemplaresToolStripMenuItem
         '
         Me.EjemplaresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem1, Me.ModificarToolStripMenuItem1, Me.EliminarToolStripMenuItem1})
         Me.EjemplaresToolStripMenuItem.Name = "EjemplaresToolStripMenuItem"
-        Me.EjemplaresToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.EjemplaresToolStripMenuItem.Size = New System.Drawing.Size(151, 24)
         Me.EjemplaresToolStripMenuItem.Text = "Ejemplares"
         '
         'RegistrarToolStripMenuItem1
@@ -163,6 +167,31 @@ Partial Class Form1
         Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(163, 24)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar sesion"
         '
+        'ClientesToolStripMenuItem1
+        '
+        Me.ClientesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.BajaClienteToolStripMenuItem, Me.BajaClientesToolStripMenuItem})
+        Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
+        Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(73, 24)
+        Me.ClientesToolStripMenuItem1.Text = "Clientes"
+        '
+        'BajaClienteToolStripMenuItem
+        '
+        Me.BajaClienteToolStripMenuItem.Name = "BajaClienteToolStripMenuItem"
+        Me.BajaClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.BajaClienteToolStripMenuItem.Text = "Clientes activos"
+        '
+        'BajaClientesToolStripMenuItem
+        '
+        Me.BajaClientesToolStripMenuItem.Name = "BajaClientesToolStripMenuItem"
+        Me.BajaClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.BajaClientesToolStripMenuItem.Text = "Eliminar"
+        '
+        'ConsultarToolStripMenuItem
+        '
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -199,5 +228,9 @@ Partial Class Form1
     Friend WithEvents SesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IniciarSesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BajaClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BajaClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -23,7 +23,7 @@ Public Class frmPeliculaModificar
         txtDescripcion.Text = row.Item("descripcion").ToString
         intId = row.Item("pelicula_id").ToString
     End Sub
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
         'Actualizacion de los valores en la BD de el elemento seleccionado en el ComboBox
         If txtNombre.Text = "" Then
             ErrProviderModificarPelicula.SetError(txtNombre, "El campo Nombre no puede estar Vacío")
@@ -50,8 +50,8 @@ Public Class frmPeliculaModificar
         Dim row As DataRowView = DirectCast(cmbPelicula.SelectedItem, DataRowView)
         pelicula.gPeliculaID = row.Item("pelicula_id")
         Dim funcPelicula As New fPelicula
-        Dim ejecutado As Boolean = funcPelicula.modificarPelicula(pelicula)
-        If ejecutado = True Then
+
+        If funcPelicula.modificarPelicula(pelicula) = True Then
             MessageBox.Show("Pelicula modificada con Éxito!", "Modificar pelicula", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
@@ -59,7 +59,7 @@ Public Class frmPeliculaModificar
         Dim funcPelicula As New fPelicula
         Dim dt As DataTable = funcPelicula.mostrarDatosPeliculas()
         cmbPelicula.DataSource = dt
-        cmbPelicula.DisplayMember = "nombre"
+        cmbPelicula.DisplayMember = "Cliente"
         cmbPelicula.ValueMember = "pelicula_id"
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

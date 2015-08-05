@@ -2,11 +2,6 @@
 
  
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        '   frmPeliculaNueva.Show()
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmAlquilerRegistrar.ShowDialog()
@@ -36,5 +31,9 @@
     Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
         Me.Close()
         Login.Close()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        frmClienteConsultar.ShowDialog()
     End Sub
 End Class

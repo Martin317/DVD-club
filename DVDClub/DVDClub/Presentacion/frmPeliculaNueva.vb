@@ -7,7 +7,7 @@ Public Class frmPeliculaNueva
     'se le pasa a la variable conexion el String de conexion de nuestra BD
     'Dim conexion As New SqlConnection("String de Conexion;")
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnConfirmar_Click(sender As Object, e As EventArgs)
         'comprobacion de campos y guardado de pelicula en la BD
 
         If txtNombre.Text = "" Then
@@ -46,9 +46,8 @@ Public Class frmPeliculaNueva
     End Sub
 
   
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
         Me.Close()
-
     End Sub
 
  
