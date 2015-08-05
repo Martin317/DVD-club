@@ -109,6 +109,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtEmail.Location = New System.Drawing.Point(112, 308)
+        Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.ReadOnly = True
         Me.txtEmail.Size = New System.Drawing.Size(324, 22)
@@ -119,6 +120,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtTelefono.BackColor = System.Drawing.SystemColors.Window
         Me.txtTelefono.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtTelefono.Location = New System.Drawing.Point(112, 267)
+        Me.txtTelefono.MaxLength = 19
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.ReadOnly = True
         Me.txtTelefono.Size = New System.Drawing.Size(324, 22)
@@ -129,6 +131,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtDireccion.BackColor = System.Drawing.SystemColors.Window
         Me.txtDireccion.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtDireccion.Location = New System.Drawing.Point(112, 226)
+        Me.txtDireccion.MaxLength = 50
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.ReadOnly = True
         Me.txtDireccion.Size = New System.Drawing.Size(324, 22)
@@ -139,6 +142,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtDni.BackColor = System.Drawing.SystemColors.Window
         Me.txtDni.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtDni.Location = New System.Drawing.Point(112, 185)
+        Me.txtDni.MaxLength = 19
         Me.txtDni.Name = "txtDni"
         Me.txtDni.ReadOnly = True
         Me.txtDni.Size = New System.Drawing.Size(324, 22)
@@ -149,6 +153,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtApellido.BackColor = System.Drawing.SystemColors.Window
         Me.txtApellido.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtApellido.Location = New System.Drawing.Point(112, 144)
+        Me.txtApellido.MaxLength = 50
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.ReadOnly = True
         Me.txtApellido.Size = New System.Drawing.Size(324, 22)
@@ -159,6 +164,7 @@ Partial Class frmAlquilerRegistrar
         Me.txtNombre.BackColor = System.Drawing.SystemColors.Window
         Me.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtNombre.Location = New System.Drawing.Point(112, 103)
+        Me.txtNombre.MaxLength = 50
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ReadOnly = True
         Me.txtNombre.Size = New System.Drawing.Size(324, 22)

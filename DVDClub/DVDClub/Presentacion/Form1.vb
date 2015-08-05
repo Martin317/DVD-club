@@ -36,4 +36,8 @@
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
         frmClienteConsultar.ShowDialog()
     End Sub
+
+    Private Sub BajaClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaClienteToolStripMenuItem.Click
+        frmClientesActivos.ShowDialog()
+    End Sub
 End Class

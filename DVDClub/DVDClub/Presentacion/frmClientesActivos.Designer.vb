@@ -24,8 +24,8 @@ Partial Class frmClientesActivos
     Private Sub InitializeComponent()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.lstClientesActivos = New System.Windows.Forms.ListBox()
+        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,13 +52,6 @@ Partial Class frmClientesActivos
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Clientes activos"
         '
-        'VScrollBar1
-        '
-        Me.VScrollBar1.Location = New System.Drawing.Point(629, 18)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(21, 475)
-        Me.VScrollBar1.TabIndex = 1
-        '
         'lstClientesActivos
         '
         Me.lstClientesActivos.FormattingEnabled = True
@@ -67,6 +60,13 @@ Partial Class frmClientesActivos
         Me.lstClientesActivos.Name = "lstClientesActivos"
         Me.lstClientesActivos.Size = New System.Drawing.Size(626, 468)
         Me.lstClientesActivos.TabIndex = 2
+        '
+        'VScrollBar1
+        '
+        Me.VScrollBar1.Location = New System.Drawing.Point(629, 18)
+        Me.VScrollBar1.Name = "VScrollBar1"
+        Me.VScrollBar1.Size = New System.Drawing.Size(21, 475)
+        Me.VScrollBar1.TabIndex = 1
         '
         'frmClientesActivos
         '

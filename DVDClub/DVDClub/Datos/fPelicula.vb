@@ -47,7 +47,7 @@ Public Class fPelicula
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de Actualizar la Pelicula." &
+            MessageBox.Show("Atención: se ha generado un error tratando de modificar la Pelicula." &
               Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
               MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
@@ -95,7 +95,7 @@ Public Class fPelicula
                 Return Nothing
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los ejemplares disponibles de las peliculas." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
@@ -141,7 +141,7 @@ Public Class fPelicula
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar las peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de dar de baja la pelicula." &
                          Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                          MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing

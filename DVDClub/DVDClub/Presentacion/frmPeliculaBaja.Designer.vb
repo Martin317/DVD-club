@@ -23,10 +23,10 @@ Partial Class frmPeliculaBaja
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbPelicula = New System.Windows.Forms.ComboBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.btnConfirmar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +44,15 @@ Partial Class frmPeliculaBaja
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pelicula a dar de baja"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(50, 58)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 17)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Pelicula:"
         '
         'cmbPelicula
         '
@@ -76,15 +85,6 @@ Partial Class frmPeliculaBaja
         Me.btnConfirmar.TabIndex = 3
         Me.btnConfirmar.Text = "Confirmar"
         Me.btnConfirmar.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(50, 58)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 17)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Pelicula:"
         '
         'frmPeliculaBaja
         '

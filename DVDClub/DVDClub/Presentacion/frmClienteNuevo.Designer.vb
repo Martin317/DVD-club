@@ -74,7 +74,7 @@ Partial Class frmClienteNuevo
         '
         Me.txtDNI.Location = New System.Drawing.Point(126, 140)
         Me.txtDNI.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtDNI.MaxLength = 50
+        Me.txtDNI.MaxLength = 19
         Me.txtDNI.Name = "txtDNI"
         Me.txtDNI.Size = New System.Drawing.Size(317, 22)
         Me.txtDNI.TabIndex = 2
@@ -158,7 +158,7 @@ Partial Class frmClienteNuevo
         '
         Me.txtTelefono.Location = New System.Drawing.Point(126, 236)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtTelefono.MaxLength = 50
+        Me.txtTelefono.MaxLength = 19
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(317, 22)
         Me.txtTelefono.TabIndex = 10

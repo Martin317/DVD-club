@@ -26,8 +26,6 @@ Partial Class frmPeliculaNueva
         Me.ErrProviderPeliculaNueva = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dtpFechaLanzamiento = New System.Windows.Forms.DateTimePicker()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.txtGenero = New System.Windows.Forms.TextBox()
         Me.txtIdioma = New System.Windows.Forms.TextBox()
@@ -37,6 +35,8 @@ Partial Class frmPeliculaNueva
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnConfirmar = New System.Windows.Forms.Button()
         CType(Me.ErrProviderPeliculaNueva, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -75,32 +75,11 @@ Partial Class frmPeliculaNueva
         Me.dtpFechaLanzamiento.TabIndex = 27
         Me.dtpFechaLanzamiento.Value = New Date(2010, 1, 1, 0, 0, 0, 0)
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(679, 352)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(147, 45)
-        Me.btnCancelar.TabIndex = 25
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
-        'btnConfirmar
-        '
-        Me.btnConfirmar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfirmar.Location = New System.Drawing.Point(524, 352)
-        Me.btnConfirmar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnConfirmar.Name = "btnConfirmar"
-        Me.btnConfirmar.Size = New System.Drawing.Size(147, 45)
-        Me.btnConfirmar.TabIndex = 26
-        Me.btnConfirmar.Text = "Confirmar"
-        Me.btnConfirmar.UseVisualStyleBackColor = True
-        '
         'txtDescripcion
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(129, 146)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescripcion.MaxLength = 500
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(584, 162)
@@ -110,6 +89,7 @@ Partial Class frmPeliculaNueva
         '
         Me.txtGenero.Location = New System.Drawing.Point(129, 91)
         Me.txtGenero.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtGenero.MaxLength = 20
         Me.txtGenero.Name = "txtGenero"
         Me.txtGenero.Size = New System.Drawing.Size(218, 22)
         Me.txtGenero.TabIndex = 22
@@ -118,6 +98,7 @@ Partial Class frmPeliculaNueva
         '
         Me.txtIdioma.Location = New System.Drawing.Point(577, 36)
         Me.txtIdioma.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIdioma.MaxLength = 20
         Me.txtIdioma.Name = "txtIdioma"
         Me.txtIdioma.Size = New System.Drawing.Size(205, 22)
         Me.txtIdioma.TabIndex = 23
@@ -126,6 +107,7 @@ Partial Class frmPeliculaNueva
         '
         Me.txtNombre.Location = New System.Drawing.Point(129, 36)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.MaxLength = 60
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(218, 22)
         Me.txtNombre.TabIndex = 24
@@ -184,6 +166,28 @@ Partial Class frmPeliculaNueva
         Me.Label1.Size = New System.Drawing.Size(69, 17)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Nombre:"
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Location = New System.Drawing.Point(679, 352)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(147, 45)
+        Me.btnCancelar.TabIndex = 25
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'btnConfirmar
+        '
+        Me.btnConfirmar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfirmar.Location = New System.Drawing.Point(524, 352)
+        Me.btnConfirmar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.Size = New System.Drawing.Size(147, 45)
+        Me.btnConfirmar.TabIndex = 26
+        Me.btnConfirmar.Text = "Confirmar"
+        Me.btnConfirmar.UseVisualStyleBackColor = True
         '
         'frmPeliculaNueva
         '

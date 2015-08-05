@@ -50,6 +50,7 @@ Partial Class Login
         '
         Me.txtUsuario.Location = New System.Drawing.Point(187, 49)
         Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsuario.MaxLength = 20
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(267, 22)
         Me.txtUsuario.TabIndex = 1
@@ -79,6 +80,7 @@ Partial Class Login
         '
         Me.txtContraseña.Location = New System.Drawing.Point(187, 105)
         Me.txtContraseña.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtContraseña.MaxLength = 20
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(267, 22)

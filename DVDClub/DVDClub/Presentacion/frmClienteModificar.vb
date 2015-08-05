@@ -7,7 +7,7 @@
         cmbCliente.ValueMember = "cliente_id"
         cmbCliente.DisplayMember = "Cliente"
         If cmbCliente.Items.Count > 0 And frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex <> -1 Then
-            cmbCliente.SelectedItem = frmAlquilerRegistrar.cmbBuscarClientes.SelectedItem
+            cmbCliente.SelectedIndex = frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex
             llenarTextBox()
         End If
 
@@ -41,6 +41,7 @@
             ErrProviderClienteModificar.SetError(txtTelefono, "El campo telefono no puede estar vacio")
         Else
             modificarCliente()
+            Me.Close()
         End If
 
     End Sub
@@ -56,6 +57,7 @@
         Dim funcCliente As New fCliente
         If funcCliente.modificarCliente(cliente) Then
             MessageBox.Show("Cliente modificado con Éxito!", "Modificar cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            frmAlquilerRegistrar.funcMostrarClientes()
         End If
     End Sub
 End Class

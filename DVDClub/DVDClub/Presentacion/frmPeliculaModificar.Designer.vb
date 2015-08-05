@@ -81,6 +81,7 @@ Partial Class frmPeliculaModificar
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(147, 135)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescripcion.MaxLength = 500
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(657, 144)
@@ -90,6 +91,7 @@ Partial Class frmPeliculaModificar
         '
         Me.txtGenero.Location = New System.Drawing.Point(147, 81)
         Me.txtGenero.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtGenero.MaxLength = 20
         Me.txtGenero.Name = "txtGenero"
         Me.txtGenero.Size = New System.Drawing.Size(188, 22)
         Me.txtGenero.TabIndex = 22
@@ -98,6 +100,7 @@ Partial Class frmPeliculaModificar
         '
         Me.txtIdioma.Location = New System.Drawing.Point(599, 30)
         Me.txtIdioma.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIdioma.MaxLength = 20
         Me.txtIdioma.Name = "txtIdioma"
         Me.txtIdioma.Size = New System.Drawing.Size(205, 22)
         Me.txtIdioma.TabIndex = 23
@@ -106,6 +109,7 @@ Partial Class frmPeliculaModificar
         '
         Me.txtNombre.Location = New System.Drawing.Point(147, 26)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.MaxLength = 60
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(188, 22)
         Me.txtNombre.TabIndex = 24

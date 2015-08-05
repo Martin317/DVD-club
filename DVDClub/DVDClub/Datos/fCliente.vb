@@ -18,7 +18,7 @@ Public Class fCliente
                 Return Nothing
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes y peliculas." &
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los clientes." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
@@ -128,7 +128,7 @@ Public Class fCliente
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de modificar el cliente." &
+            MessageBox.Show("Atención: se ha generado un error tratando de dar de baja el cliente." &
               Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
               MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing

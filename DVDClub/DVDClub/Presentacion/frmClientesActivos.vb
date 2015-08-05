@@ -9,4 +9,8 @@
             lstClientesActivos.ValueMember = "cliente_id"
         End If
     End Sub
+
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        Me.Close()
+    End Sub
 End Class

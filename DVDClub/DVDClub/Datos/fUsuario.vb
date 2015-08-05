@@ -39,7 +39,7 @@ Public Class fUsuario
             Return correcto
 
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando acceder a la base de datos." &
+            MessageBox.Show("Atención: se ha generado un error tratando acceder a los usuarios del sistema." &
                             Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
