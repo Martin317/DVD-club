@@ -6,57 +6,106 @@ DVDClub
 </name>
 </assembly>
 <members>
-<member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresDataTable">
+<member name="P:DVDClub.My.Resources.Resources.ResourceManager">
 	<summary>
-Represents the strongly named DataTable class.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRow">
+</member><member name="P:DVDClub.My.Resources.Resources.Culture">
 	<summary>
-Represents strongly named DataRow class.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRowChangeEvent">
+</member><member name="P:DVDClub.My.Resources.Resources.Actualizar">
 	<summary>
-Row event argument class
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudores">
+</member><member name="P:DVDClub.My.Resources.Resources.Actualizar1">
 	<summary>
-Represents a strongly typed in-memory cache of data.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.procReporteClientesDeudoresTableAdapter">
+</member><member name="P:DVDClub.My.Resources.Resources.Agregar">
 	<summary>
-Represents the connection and commands used to retrieve and save data.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="P:DVDClub.My.Resources.Resources.Agregar_Todo">
 	<summary>
-Update rows in top-down order.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="P:DVDClub.My.Resources.Resources.Agregar_TodoD">
 	<summary>
-Insert rows in top-down order.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="P:DVDClub.My.Resources.Resources.Buscar">
 	<summary>
-Delete rows in bottom-up order.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="P:DVDClub.My.Resources.Resources.BuscarD">
 	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateAll(DVDClub.SatasetDeudores)">
+</member><member name="P:DVDClub.My.Resources.Resources.Editar">
 	<summary>
-Update all changes to the dataset.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="P:DVDClub.My.Resources.Resources.Editar1">
 	<summary>
-Update Order Option
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="P:DVDClub.My.Resources.Resources.EditarD">
 	<summary>
-Used to sort self-referenced table's rows
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager">
+</member><member name="P:DVDClub.My.Resources.Resources.Eliminar">
 	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Eliminar1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.EliminarD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Find">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Impresion">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.ImpresionD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Imprimir">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Nuevo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.NuevoD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Quitar_Todo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.Quitar_TodoD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.www">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:DVDClub.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member><member name="T:DVDClub.dvdclubdbDataSet2.procReporteClientesDeudoresDataTable">
 	<summary>
@@ -161,107 +210,6 @@ Used to sort self-referenced table's rows
 </member><member name="T:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Actualizar">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Actualizar1">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Agregar">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Agregar_Todo">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Agregar_TodoD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Buscar">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.BuscarD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Editar">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Editar1">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.EditarD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Eliminar">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Eliminar1">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.EliminarD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Find">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Impresion">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.ImpresionD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Imprimir">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Nuevo">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.NuevoD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Quitar_Todo">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.Quitar_TodoD">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="P:DVDClub.My.Resources.Resources.www">
-	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="T:DVDClub.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member><member name="T:DVDClub.dvdclubdbDataSet1.procReporteClientesDeudoresDataTable">
 	<summary>
@@ -380,6 +328,58 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.procReporteClientesDeudoresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateAll(DVDClub.SatasetDeudores)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

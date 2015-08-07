@@ -35,8 +35,8 @@ Partial Class frmAlquilerDevolucion
         Me.dgvDetalleAlquiler = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblTiempoAlquiler = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblDeudor = New System.Windows.Forms.Label()
+        Me.lblTiempo = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvAlquileres, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,34 +166,33 @@ Partial Class frmAlquilerDevolucion
         Me.lblTiempoAlquiler.Size = New System.Drawing.Size(0, 17)
         Me.lblTiempoAlquiler.TabIndex = 26
         '
-        'Label3
+        'lblDeudor
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(587, 307)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(134, 17)
-        Me.Label3.TabIndex = 27
-        Me.Label3.Text = "24 hs superadas."
-        Me.Label3.Visible = False
+        Me.lblDeudor.AutoSize = True
+        Me.lblDeudor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDeudor.ForeColor = System.Drawing.Color.Red
+        Me.lblDeudor.Location = New System.Drawing.Point(587, 307)
+        Me.lblDeudor.Name = "lblDeudor"
+        Me.lblDeudor.Size = New System.Drawing.Size(134, 17)
+        Me.lblDeudor.TabIndex = 27
+        Me.lblDeudor.Text = "24 hs superadas."
+        Me.lblDeudor.Visible = False
         '
-        'Label4
+        'lblTiempo
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(276, 307)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
-        Me.Label4.TabIndex = 28
-        Me.Label4.Text = "Label4"
+        Me.lblTiempo.AutoSize = True
+        Me.lblTiempo.Location = New System.Drawing.Point(170, 307)
+        Me.lblTiempo.Name = "lblTiempo"
+        Me.lblTiempo.Size = New System.Drawing.Size(0, 17)
+        Me.lblTiempo.TabIndex = 28
         '
         'frmAlquilerDevolucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 577)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblTiempo)
+        Me.Controls.Add(Me.lblDeudor)
         Me.Controls.Add(Me.lblTiempoAlquiler)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox3)
@@ -224,8 +223,8 @@ Partial Class frmAlquilerDevolucion
     Friend WithEvents ErrProviderDevolucionAlquiler As System.Windows.Forms.ErrorProvider
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents dgvDetalleAlquiler As System.Windows.Forms.DataGridView
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblDeudor As System.Windows.Forms.Label
     Friend WithEvents lblTiempoAlquiler As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lblTiempo As System.Windows.Forms.Label
 End Class

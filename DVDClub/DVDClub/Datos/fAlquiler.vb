@@ -72,7 +72,7 @@ Public Class fAlquiler
             cmd.Connection = cnn
             Dim fechaActual As DateTime = Convert.ToDateTime(DateAndTime.Now.ToShortDateString)
             Dim horaActual As DateTime = Convert.ToDateTime(DateAndTime.Now.ToShortTimeString)
-            cmd.CommandText = "UPDATE alquiler SET alquiler.fecha_devolucion = '" & fechaActual & "', alquiler.hora_devolucion = '" & horaActual & "' "
+            cmd.CommandText = "UPDATE alquiler SET alquiler.fecha_devolucion = '" & fechaActual & "', alquiler.hora_devolucion = '" & horaActual & "' WHERE alquiler.alquiler_id='" & alquiler_id & "'"
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
