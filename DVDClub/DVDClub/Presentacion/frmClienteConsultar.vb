@@ -35,4 +35,12 @@
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         Me.Close()
     End Sub
+
+    Private Sub labCliente_Click(sender As Object, e As EventArgs) Handles labCliente.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
 End Class

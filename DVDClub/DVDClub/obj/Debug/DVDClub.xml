@@ -6,7 +6,283 @@ DVDClub
 </name>
 </assembly>
 <members>
-<member name="P:DVDClub.My.Resources.Resources.ResourceManager">
+<member name="T:DVDClub.dvdclubdbDataSetDeudores.procReporteClientesDeudoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudores.procReporteClientesDeudoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudores.procReporteClientesDeudoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudores">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.procReporteClientesDeudoresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.dvdclubdbDataSetDeudores,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.dvdclubdbDataSetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.dvdclubdbDataSetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.UpdateAll(DVDClub.dvdclubdbDataSetDeudores)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetDeudoresTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores.procReporteClientesDeudoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.SatasetDeudores">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.procReporteClientesDeudoresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.SatasetDeudores,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateAll(DVDClub.SatasetDeudores)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.SatasetDeudoresTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2.procReporteClientesDeudoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2.procReporteClientesDeudoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2.procReporteClientesDeudoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2TableAdapters.procReporteClientesDeudoresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.dvdclubdbDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.dvdclubdbDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.dvdclubdbDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.UpdateAll(DVDClub.dvdclubdbDataSet2)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet2TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1.procReporteClientesDeudoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1.procReporteClientesDeudoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1.procReporteClientesDeudoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1TableAdapters.procReporteClientesDeudoresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.dvdclubdbDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.dvdclubdbDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.dvdclubdbDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.UpdateAll(DVDClub.dvdclubdbDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.clienteDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.procMostrarClientesActivosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.clienteRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.procMostrarClientesActivosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.clienteRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet.procMostrarClientesActivosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.clienteTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.procMostrarClientesActivosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(DVDClub.dvdclubdbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(DVDClub.dvdclubdbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(DVDClub.dvdclubdbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.UpdateAll(DVDClub.dvdclubdbDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DVDClub.dvdclubdbDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:DVDClub.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

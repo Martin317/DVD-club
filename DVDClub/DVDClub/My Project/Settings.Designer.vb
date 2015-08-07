@@ -65,6 +65,17 @@ Namespace My
                 Me("UltimoUsuario") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MARTINPC\SQLExpress;Initial Catalog=dvdclubdb;User ID=sa;Password=qwe"& _ 
+            "asdzxc159753")>  _
+        Public ReadOnly Property DvdClub() As String
+            Get
+                Return CType(Me("DvdClub"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

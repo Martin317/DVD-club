@@ -18,7 +18,7 @@
             usuario.gContrasenia = txtContraseña.Text
             Dim correcto As Boolean = funcUsuario.comprobarDatos(usuario)
             If correcto = True Then
-                Form1.Show()
+                frmPrincipal.Show()
                 Me.Visible = False
             Else
                 MsgBox("Usuario o contraseña incorrectos", MsgBoxStyle.Critical, "Error!")

@@ -46,10 +46,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -78,6 +81,26 @@
     <Compile Include="Datos\fPeliculaEspecifica.vb" />
     <Compile Include="Datos\fSesion.vb" />
     <Compile Include="Datos\fUsuario.vb" />
+    <Compile Include="dvdclubdbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dvdclubdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dvdclubdbDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dvdclubdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dvdclubdbDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dvdclubdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dvdclubdbDataSetDeudores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dvdclubdbDataSetDeudores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Logica\logAlquiler.vb" />
     <Compile Include="Logica\logCliente.vb" />
     <Compile Include="Logica\logDetalleAlquiler.vb" />
@@ -86,6 +109,12 @@
     <Compile Include="Logica\logSesion.vb" />
     <Compile Include="Logica\logPeliculaEspecifica.vb" />
     <Compile Include="Logica\logUsuario.vb" />
+    <Compile Include="Presentacion\frmAlquilerDevolucion.Designer.vb">
+      <DependentUpon>frmAlquilerDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAlquilerDevolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmAlquilerRegistrar.Designer.vb">
       <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </Compile>
@@ -122,11 +151,11 @@
     <Compile Include="Presentacion\frmClientesActivos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form1.vb">
+    <Compile Include="Presentacion\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Presentacion\frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -180,14 +209,34 @@
     <Compile Include="Presentacion\frmPeliculaNueva.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmReporteClientesDeudores.Designer.vb">
+      <DependentUpon>frmReporteClientesDeudores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteClientesDeudores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReportesClientesActivos.Designer.vb">
+      <DependentUpon>frmReportesClientesActivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReportesClientesActivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SatasetDeudores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatasetDeudores.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Presentacion\frmAlquilerDevolucion.resx">
+      <DependentUpon>frmAlquilerDevolucion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAlquilerRegistrar.resx">
       <DependentUpon>frmAlquilerRegistrar.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,8 +255,8 @@
     <EmbeddedResource Include="Presentacion\frmClientesActivos.resx">
       <DependentUpon>frmClientesActivos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -224,17 +273,72 @@
     <EmbeddedResource Include="Presentacion\frmPeliculaEspecificaBaja.resx">
       <DependentUpon>frmPeliculaEspecificaBaja.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmPeliculaEspecificaRegistrar.resx">
+      <DependentUpon>frmPeliculaEspecificaRegistrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPeliculaModificar.resx">
       <DependentUpon>frmPeliculaModificar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPeliculaNueva.resx">
       <DependentUpon>frmPeliculaNueva.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporteClientesDeudores.resx">
+      <DependentUpon>frmReporteClientesDeudores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReportesClientesActivos.resx">
+      <DependentUpon>frmReportesClientesActivos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptClientesActivos.rdlc" />
+    <EmbeddedResource Include="Reportes\rptClientesDeudores.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dvdclubdbDataSet.xsc">
+      <DependentUpon>dvdclubdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dvdclubdbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dvdclubdbDataSet.xss">
+      <DependentUpon>dvdclubdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSet1.xsc">
+      <DependentUpon>dvdclubdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dvdclubdbDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dvdclubdbDataSet1.xss">
+      <DependentUpon>dvdclubdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSet2.xsc">
+      <DependentUpon>dvdclubdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dvdclubdbDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dvdclubdbDataSet2.xss">
+      <DependentUpon>dvdclubdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSetDeudores.xsc">
+      <DependentUpon>dvdclubdbDataSetDeudores.xsd</DependentUpon>
+    </None>
+    <None Include="dvdclubdbDataSetDeudores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dvdclubdbDataSetDeudores.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dvdclubdbDataSetDeudores.xss">
+      <DependentUpon>dvdclubdbDataSetDeudores.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -245,10 +349,19 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SatasetDeudores.xsc">
+      <DependentUpon>SatasetDeudores.xsd</DependentUpon>
+    </None>
+    <None Include="SatasetDeudores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SatasetDeudores.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SatasetDeudores.xss">
+      <DependentUpon>SatasetDeudores.xsd</DependentUpon>
+    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Actualizar.gif" />
   </ItemGroup>

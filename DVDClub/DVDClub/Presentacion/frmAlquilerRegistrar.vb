@@ -48,40 +48,46 @@
         End Try
     End Sub
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
-        Dim respuesta As Integer = MessageBox.Show("¿Desea registrar los datos del alquiler?", "Confirmacion de alquiler",
-                                           MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If respuesta = MsgBoxResult.Yes Then
-            Dim cliente As New logCliente
-            Dim sesion As New logSesion
-            Dim funcSesion As New fSesion
-            'sesion
-            sesion = funcSesion.capturarSesionActual()
-            'cliente
-            cliente.gClienteID = Convert.ToInt32(txtNumero.Text)
-            'alquiler
-            Dim alquiler As New logAlquiler
-            alquiler.gCliente = cliente
-            alquiler.gFechaEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortDateString)
-            alquiler.gHoraEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortTimeString)
-            alquiler.gSesion = sesion
-            'peliculas
-            Dim peliculasID As New List(Of Integer)
-            For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
-                If dr.Cells(0).Value = True Then
-                    peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
-                End If
-            Next
-            'Insertar alquiler, con sus detalles.
-            Dim funcAlquiler As New fAlquiler
-            funcAlquiler.insertarAlquiler(alquiler)
-            'Actualizar estado de las peliculas especificas(ejemplares)
-            Dim funcPeliculaEspecfica As New fPeliculaEspecifica
-            funcPeliculaEspecfica.actualizarEstadoPelicula()
-            'Actualizar estado del cliente a activo (si es necesario)
-            Dim funcCliente As New fCliente
-            funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
-            Me.Close()
+        If dgvDetalles.Rows.Count > 0 Then
+            Dim respuesta As Integer = MessageBox.Show("¿Desea registrar los datos del alquiler?", "Confirmacion de alquiler",
+                                               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If respuesta = MsgBoxResult.Yes Then
+                Dim cliente As New logCliente
+                Dim sesion As New logSesion
+                Dim funcSesion As New fSesion
+                'sesion
+                sesion = funcSesion.capturarSesionActual()
+                'cliente
+                cliente.gClienteID = Convert.ToInt32(txtNumero.Text)
+                'alquiler
+                Dim alquiler As New logAlquiler
+                alquiler.gCliente = cliente
+                alquiler.gFechaEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortDateString)
+                alquiler.gHoraEntrega = Convert.ToDateTime(System.DateTime.Now.ToShortTimeString)
+                alquiler.gSesion = sesion
+                'peliculas
+                Dim peliculasID As New List(Of Integer)
+                For Each dr As DataGridViewRow In Me.dgvPeliculas.Rows
+                    If dr.Cells(0).Value = True Then
+                        peliculasID.Add(Convert.ToInt32(dr.Cells(1).Value))
+                    End If
+                Next
+                'Insertar alquiler, con sus detalles.
+                Dim funcAlquiler As New fAlquiler
+                funcAlquiler.insertarAlquiler(alquiler)
+                'Actualizar estado de las peliculas especificas(ejemplares)
+                Dim funcPeliculaEspecfica As New fPeliculaEspecifica
+                funcPeliculaEspecfica.actualizarEstadoPelicula()
+                'Actualizar estado del cliente a activo (si es necesario)
+                Dim funcCliente As New fCliente
+                funcCliente.actualizarEstadoCliente(CType(txtNumero.Text, Integer))
+                Me.Close()
+            End If
+        Else
+            MessageBox.Show("El alquiler debe tener al menos un detalle.", "Confirmacion de alquiler",
+                                               MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
     End Sub
     Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
         frmClienteNuevo.ShowDialog()
@@ -147,7 +153,7 @@
                         dgvDetalles.DataSource = dt
                         dgvPeliculas.Refresh()
                     End If
-                    'TODO cambiar estado del ejemplar a no disponible
+
                 Next
                 primeraVez = False
                 dgvDetalles.Columns(0).Width = 150
@@ -157,10 +163,11 @@
     End Sub
     Private Sub txtPeliculas_TextChanged(sender As Object, e As EventArgs) Handles txtPeliculas.TextChanged
         buscarDatos()
-        If dgvPeliculas.RowCount <> 0 Then
+        If dgvPeliculas.RowCount > 0 Then
             dgvPeliculas.Columns("Numero de pelicula").Visible = False
             dgvPeliculas.Columns(2).Width = 210
         End If
 
     End Sub
+
 End Class

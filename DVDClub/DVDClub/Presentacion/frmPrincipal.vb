@@ -1,6 +1,6 @@
-﻿Public Class Form1
+﻿Public Class frmPrincipal
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         frmAlquilerRegistrar.ShowDialog()
 
     End Sub
@@ -53,5 +53,27 @@
 
     Private Sub ConsultarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem1.Click
         frmPeliculaConsultar.ShowDialog()
+    End Sub
+
+    Private Sub RegistrarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RegistrarToolStripMenuItem1.Click
+        frmPeliculaEspecificaRegistrar.ShowDialog()
+    End Sub
+
+    Private Sub EliminarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem1.Click
+        frmPeliculaEspecificaBaja.ShowDialog()
+    End Sub
+
+    Private Sub RegistrarDevolucionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarDevolucionToolStripMenuItem.Click
+        frmAlquilerDevolucion.ShowDialog()
+    End Sub
+
+   
+    Private Sub ClientesActivosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesActivosToolStripMenuItem.Click
+        frmReportesClientesActivos.ShowDialog()
+    End Sub
+
+    Private Sub ClientesDeudoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesDeudoresToolStripMenuItem.Click
+        frmReporteClientesDeudores.ShowDialog()
+
     End Sub
 End Class

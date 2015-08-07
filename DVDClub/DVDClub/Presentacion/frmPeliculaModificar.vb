@@ -60,7 +60,7 @@ Public Class frmPeliculaModificar
         Dim dt As DataTable = funcPelicula.mostrarDatosPeliculas()
         If dt.Rows.Count > 0 Then
             cmbPelicula.DataSource = dt
-            cmbPelicula.DisplayMember = "Cliente"
+            cmbPelicula.DisplayMember = "nombre"
             cmbPelicula.ValueMember = "pelicula_id"
         Else
             MessageBox.Show("No hay peliculas disponibles", "Peliculas", MessageBoxButtons.OK, MessageBoxIcon.Error)

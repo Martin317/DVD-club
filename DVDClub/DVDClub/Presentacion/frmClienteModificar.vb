@@ -3,12 +3,15 @@
     Private Sub frmClienteModificar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim funcCliente As New fCliente
         Dim dt As DataTable = funcCliente.mostrarDatos()
-        cmbCliente.DataSource = dt
-        cmbCliente.ValueMember = "cliente_id"
-        cmbCliente.DisplayMember = "Cliente"
+       
         If cmbCliente.Items.Count > 0 And frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex <> -1 Then
+            cmbCliente.DataSource = dt
+            cmbCliente.ValueMember = "cliente_id"
+            cmbCliente.DisplayMember = "Cliente"
             cmbCliente.SelectedIndex = frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex
             llenarTextBox()
+        Else
+            MessageBox.Show("No hay clientes disponibles", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub

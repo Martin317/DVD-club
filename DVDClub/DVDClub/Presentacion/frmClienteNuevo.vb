@@ -29,6 +29,7 @@
         cliente.gDadoDeBaja = False
         cliente.gEstado = estado
         cliente.gEsDeudor = False
+        cliente.gTelefono = txtTelefono.Text
         Dim funcCliente As New fCliente
         If funcCliente.ingresarCliente(cliente) Then
             MessageBox.Show("Cliente registrado con Éxito!", "Cliente nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)

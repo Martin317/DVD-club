@@ -23,5 +23,29 @@ Public Class fDetalleAlquiler
             desconectar()
         End Try
     End Sub
+    Public Function mostrarDetalles(alquiler_id As Integer) As DataTable
+        Try
+            conectar()
+            cmd = New SqlCommand("procMostrarDetalles")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("@ID", alquiler_id)
 
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los detalles del alquiler." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class
