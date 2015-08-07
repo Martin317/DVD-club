@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.22792cm</Width>
+              <Width>5.13102cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>17.50483cm</Width>
+              <Width>15.60173cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -18,7 +18,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox22">
+                    <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -26,17 +26,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Numero de cliente</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -52,7 +48,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox24">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -60,17 +56,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Datos del cliente</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox24</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -99,14 +91,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!cliente_id.Value</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>cliente_id</rd:DefaultName>
@@ -121,7 +109,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -134,14 +121,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ClienteActivo.Value</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ClienteActivo</rd:DefaultName>
@@ -178,8 +161,8 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>0.14111cm</Top>
+        <DataSetName>ds3</DataSetName>
+        <Top>0.03528cm</Top>
         <Height>1.2cm</Height>
         <Width>20.73275cm</Width>
         <Style>
@@ -199,6 +182,39 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Listado de clientes activos</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>1.36832cm</Top>
+          <Height>0.83812cm</Height>
+          <Width>20.73275cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
         <Textbox Name="Textbox10">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -217,9 +233,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>0.35692cm</Top>
+          <Top>0.38027cm</Top>
           <Height>0.81167cm</Height>
           <Width>6.41583cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -230,30 +247,28 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox9">
+        <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Listado de los Tipos de Sorteo</Value>
+                  <Value>Grupo 9</Value>
                   <Style>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
+                    <Format>dd/MM/yyyy</Format>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
+              <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>1.34496cm</Top>
-          <Height>0.83812cm</Height>
-          <Width>20.73275cm</Width>
-          <ZIndex>1</ZIndex>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.33355cm</Top>
+          <Left>17.80646cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -276,7 +291,7 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox14">
+        <Textbox Name="Textbox15">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -308,7 +323,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>15.50141cm</Left>
+          <Left>15.07512cm</Left>
           <Height>0.6cm</Height>
           <Width>5.23134cm</Width>
           <Style>
@@ -339,18 +354,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dvdclubdbDataSet">
+    <DataSource Name="ds3">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>378a9bd8-22ef-4fc0-829e-4d9122bef326</rd:DataSourceID>
+      <rd:DataSourceID>c4488fe8-d0e7-4160-ba75-2bf83571c8ea</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="ds3">
       <Query>
-        <DataSourceName>dvdclubdbDataSet</DataSourceName>
+        <DataSourceName>ds3</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -364,8 +379,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dvdclubdbDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\dvdclubdbDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>ds3</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Martin\Documents\GitHub\DVD-club\DVDClub\DVDClub\ds3.xsd</rd:SchemaPath>
         <rd:TableName>procMostrarClientesActivos</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -374,5 +389,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>2869270c-6fbd-4caa-a60c-946796518215</rd:ReportID>
+  <rd:ReportID>01094a17-756c-4185-96b9-c17b37843494</rd:ReportID>
 </Report>

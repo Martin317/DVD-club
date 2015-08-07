@@ -7,6 +7,7 @@
             cmbCliente.DataSource = dt
             cmbCliente.DisplayMember = "Cliente"
             cmbCliente.ValueMember = "cliente_id"
+
         Else
             ErrProviderDevolucionAlquiler.SetError(cmbCliente, "No hay ningun cliente que haya realizado un alquiler")
         End If
@@ -27,9 +28,7 @@
         End If
     End Sub
     Private Sub dgvAlquileres_SelectionChanged(sender As Object, e As EventArgs) Handles dgvAlquileres.SelectionChanged
-        'TODO Fecha detalle a calcular porque no podemos
 
-        
         If dgvAlquileres.CurrentRow IsNot Nothing Then
             Dim fechaActual = Convert.ToDateTime(System.DateTime.Now.ToShortDateString)
             Dim fechaVieja = dgvAlquileres.CurrentRow.Cells(1).Value
@@ -44,15 +43,15 @@
 
             Else
                 lblDeudor.Visible = False
-                lblTiempo.Text = ""
+                lblTiempo.Text = "0 días"
             End If
-                Dim funcDetalleAlquiler As New fDetalleAlquiler
-                Dim alquilerID As Integer = CType(dgvAlquileres.CurrentRow.Cells(0).Value, Integer)
-                Dim dt As DataTable = funcDetalleAlquiler.mostrarDetalles(alquilerID)
-                If dt.Rows.Count > 0 Then
-                    dgvDetalleAlquiler.DataSource = dt
-                End If
+            Dim funcDetalleAlquiler As New fDetalleAlquiler
+            Dim alquilerID As Integer = CType(dgvAlquileres.CurrentRow.Cells(0).Value, Integer)
+            Dim dt As DataTable = funcDetalleAlquiler.mostrarDetalles(alquilerID)
+            If dt.Rows.Count > 0 Then
+                dgvDetalleAlquiler.DataSource = dt
             End If
+        End If
 
 
 
@@ -66,15 +65,16 @@
         If funcAlquiler.registrarDevolucion(alquilerID) = True Then
             MessageBox.Show("Devolución registrada con Éxito!", "Devolución", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Dim funcPeliculaEspecifica As New fPeliculaEspecifica
-            'dt = funcPeliculaEspecifica.SeleccionarPeliculasAlquiladas(alquilerID)
             funcPeliculaEspecifica.actualizarDevolucionEjemplar()
+            Dim funcCliente As New fCliente
+            Dim row As DataRowView = DirectCast(cmbCliente.SelectedItem, DataRowView)
+            Dim dt2 As DataTable = funcAlquiler.mostrarAlquiler(row.Item("cliente_id"))
+            If dt2.Rows.Count = 0 Then
+                If funcCliente.actualizarClienteANoDeudor(row.Item("cliente_id")) = True Then
+                    MessageBox.Show("El cliente no posee alquileres", "Devolución", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End If
 
-            'For Each row In dt.Rows
-            '    Dim peliculaEspecificaID As Integer
-            '    peliculaEspecificaID = row.item("pelicula_especifica_id")
-            '    funcPeliculaEspecifica.actualizarDevolucionEjemplar()
-
-            'Next row
             Me.Close()
         End If
     End Sub

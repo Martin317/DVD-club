@@ -434,7 +434,7 @@ Partial Class frmAlquilerRegistrar
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmAlquilerRegistrar"
-        Me.Text = "frmAlquilerRegistrar2"
+        Me.Text = "Registrar alquiler"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)

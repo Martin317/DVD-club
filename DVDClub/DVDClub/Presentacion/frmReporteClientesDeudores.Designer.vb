@@ -24,13 +24,23 @@ Partial Class frmReporteClientesDeudores
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.dvdclubdbDataSetDeudores = New DVDClub.dvdclubdbDataSetDeudores()
         Me.procReporteClientesDeudoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dvdclubdbDataSetDeudores = New DVDClub.dvdclubdbDataSetDeudores()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.procReporteClientesDeudoresTableAdapter = New DVDClub.dvdclubdbDataSetDeudoresTableAdapters.procReporteClientesDeudoresTableAdapter()
-        CType(Me.dvdclubdbDataSetDeudores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.procReporteClientesDeudoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dvdclubdbDataSetDeudores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'procReporteClientesDeudoresBindingSource
+        '
+        Me.procReporteClientesDeudoresBindingSource.DataMember = "procReporteClientesDeudores"
+        Me.procReporteClientesDeudoresBindingSource.DataSource = Me.dvdclubdbDataSetDeudores
+        '
+        'dvdclubdbDataSetDeudores
+        '
+        Me.dvdclubdbDataSetDeudores.DataSetName = "dvdclubdbDataSetDeudores"
+        Me.dvdclubdbDataSetDeudores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class frmReporteClientesDeudores
         Me.ReportViewer1.Size = New System.Drawing.Size(1182, 733)
         Me.ReportViewer1.TabIndex = 0
         '
-        'dvdclubdbDataSetDeudores
-        '
-        Me.dvdclubdbDataSetDeudores.DataSetName = "dvdclubdbDataSetDeudores"
-        Me.dvdclubdbDataSetDeudores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'procReporteClientesDeudoresBindingSource
-        '
-        Me.procReporteClientesDeudoresBindingSource.DataMember = "procReporteClientesDeudores"
-        Me.procReporteClientesDeudoresBindingSource.DataSource = Me.dvdclubdbDataSetDeudores
-        '
         'procReporteClientesDeudoresTableAdapter
         '
         Me.procReporteClientesDeudoresTableAdapter.ClearBeforeFill = True
@@ -66,9 +66,9 @@ Partial Class frmReporteClientesDeudores
         Me.Controls.Add(Me.ReportViewer1)
         Me.MaximumSize = New System.Drawing.Size(1200, 780)
         Me.Name = "frmReporteClientesDeudores"
-        Me.Text = "frmReporteClientesDeudores"
-        CType(Me.dvdclubdbDataSetDeudores, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte de clientes deudores"
         CType(Me.procReporteClientesDeudoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dvdclubdbDataSetDeudores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

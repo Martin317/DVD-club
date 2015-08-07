@@ -34,10 +34,23 @@
         If funcCliente.ingresarCliente(cliente) Then
             MessageBox.Show("Cliente registrado con Éxito!", "Cliente nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information)
             frmAlquilerRegistrar.funcMostrarClientes()
+            txtNombre.Clear()
+            txtApellido.Clear()
+            txtDireccion.Clear()
+            txtDNI.Clear()
+            txtEmail.Clear()
+            txtTelefono.Clear()
+            Me.Close()
         End If
 
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        txtNombre.Clear()
+        txtApellido.Clear()
+        txtDireccion.Clear()
+        txtDNI.Clear()
+        txtEmail.Clear()
+        txtTelefono.Clear()
         Me.Close()
     End Sub
 

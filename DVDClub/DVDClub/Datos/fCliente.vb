@@ -2,6 +2,23 @@
 Public Class fCliente
     Inherits Conexion
     Dim cmd As SqlCommand
+    Public Sub actualizarClienteAInactivo(cliente_id As Integer)
+        Try
+            conectar()
+            cmd = New SqlCommand("procActualizarClienteAInactivo")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("@ID", cliente_id)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de actualizar el estado de los clientes." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            desconectar()
+        End Try
+    End Sub
     Public Function mostrarDatos() As DataTable
         Try
             conectar()
@@ -185,4 +202,44 @@ Public Class fCliente
         End Try
 
     End Function
+    Public Sub ClienteDeudor(clienteID As Integer)
+        Try
+            conectar()
+            cmd = New SqlCommand("procActualizarClienteDeudor")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("@idCliente", clienteID)
+
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("AtencióSn: se ha generado un error tratando de mostrar los clientes Deudores." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Finally
+            desconectar()
+        End Try
+    End Sub
+    Public Function actualizarClienteANoDeudor(cliente_id As Integer)
+        Try
+            conectar()
+            cmd = New SqlCommand
+            cmd.CommandText = "UPDATE cliente SET es_deudor = 'False' WHERE cliente_id = '" & cliente_id & "'"
+            cmd.Connection = cnn
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return True
+            End If
+        Catch ex As Exception
+            MessageBox.Show("AtencióSn: se ha generado un error tratando de actualizar el cliente a deudor." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class
+

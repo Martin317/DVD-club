@@ -240,7 +240,7 @@ Partial Class frmPeliculaModificar
         Me.Controls.Add(Me.btnConfirmar)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPeliculaModificar"
-        Me.Text = "PeliculaModificar"
+        Me.Text = "Modificar pelicula"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

@@ -4,7 +4,7 @@
         Dim funcCliente As New fCliente
         Dim dt As DataTable = funcCliente.mostrarDatos()
        
-        If cmbCliente.Items.Count > 0 And frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex <> -1 Then
+        If dt.Rows.Count > 0 And frmAlquilerRegistrar.cmbBuscarClientes.SelectedIndex <> -1 Then
             cmbCliente.DataSource = dt
             cmbCliente.ValueMember = "cliente_id"
             cmbCliente.DisplayMember = "Cliente"
@@ -61,6 +61,12 @@
         If funcCliente.modificarCliente(cliente) Then
             MessageBox.Show("Cliente modificado con Éxito!", "Modificar cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
             frmAlquilerRegistrar.funcMostrarClientes()
+        End If
+    End Sub
+
+    Private Sub txtNombre_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNombre.KeyDown
+        If IsNumeric(e.KeyValue) Then
+
         End If
     End Sub
 End Class

@@ -31,9 +31,10 @@ Partial Class frmPeliculaConsultar
         '
         'btnAtras
         '
-        Me.btnAtras.Location = New System.Drawing.Point(518, 365)
+        Me.btnAtras.Location = New System.Drawing.Point(691, 449)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(110, 37)
+        Me.btnAtras.Size = New System.Drawing.Size(147, 46)
         Me.btnAtras.TabIndex = 0
         Me.btnAtras.Text = "Atras"
         Me.btnAtras.UseVisualStyleBackColor = True
@@ -41,9 +42,11 @@ Partial Class frmPeliculaConsultar
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.dgvPeliculasConsultar)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(616, 347)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(821, 427)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Peliculas"
@@ -54,21 +57,23 @@ Partial Class frmPeliculaConsultar
         Me.dgvPeliculasConsultar.AllowUserToDeleteRows = False
         Me.dgvPeliculasConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPeliculasConsultar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvPeliculasConsultar.Location = New System.Drawing.Point(3, 16)
+        Me.dgvPeliculasConsultar.Location = New System.Drawing.Point(4, 19)
+        Me.dgvPeliculasConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvPeliculasConsultar.Name = "dgvPeliculasConsultar"
         Me.dgvPeliculasConsultar.ReadOnly = True
-        Me.dgvPeliculasConsultar.Size = New System.Drawing.Size(610, 328)
+        Me.dgvPeliculasConsultar.Size = New System.Drawing.Size(813, 404)
         Me.dgvPeliculasConsultar.TabIndex = 0
         '
         'frmPeliculaConsultar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(640, 414)
+        Me.ClientSize = New System.Drawing.Size(853, 510)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnAtras)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmPeliculaConsultar"
-        Me.Text = "frmPeliculaConsultar"
+        Me.Text = "Consultar peliculas"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvPeliculasConsultar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

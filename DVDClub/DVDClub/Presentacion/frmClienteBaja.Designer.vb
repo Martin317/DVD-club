@@ -35,11 +35,11 @@ Partial Class frmClienteBaja
         Me.GroupBox1.Controls.Add(Me.labCliente)
         Me.GroupBox1.Controls.Add(Me.cmbCliente)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 10)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(349, 80)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(465, 98)
         Me.GroupBox1.TabIndex = 33
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
@@ -48,26 +48,29 @@ Partial Class frmClienteBaja
         '
         Me.labCliente.AutoSize = True
         Me.labCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labCliente.Location = New System.Drawing.Point(29, 37)
+        Me.labCliente.Location = New System.Drawing.Point(39, 46)
+        Me.labCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labCliente.Name = "labCliente"
-        Me.labCliente.Size = New System.Drawing.Size(50, 13)
+        Me.labCliente.Size = New System.Drawing.Size(63, 17)
         Me.labCliente.TabIndex = 34
         Me.labCliente.Text = "Cliente:"
         '
         'cmbCliente
         '
         Me.cmbCliente.FormattingEnabled = True
-        Me.cmbCliente.Location = New System.Drawing.Point(82, 34)
+        Me.cmbCliente.Location = New System.Drawing.Point(109, 42)
+        Me.cmbCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbCliente.Name = "cmbCliente"
-        Me.cmbCliente.Size = New System.Drawing.Size(228, 21)
+        Me.cmbCliente.Size = New System.Drawing.Size(303, 24)
         Me.cmbCliente.TabIndex = 33
         '
         'btnDarDeBaja
         '
         Me.btnDarDeBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(131, 95)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(175, 117)
+        Me.btnDarDeBaja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
-        Me.btnDarDeBaja.Size = New System.Drawing.Size(110, 37)
+        Me.btnDarDeBaja.Size = New System.Drawing.Size(147, 46)
         Me.btnDarDeBaja.TabIndex = 36
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
@@ -75,23 +78,25 @@ Partial Class frmClienteBaja
         'btnAtras
         '
         Me.btnAtras.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAtras.Location = New System.Drawing.Point(248, 95)
+        Me.btnAtras.Location = New System.Drawing.Point(331, 117)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(110, 37)
+        Me.btnAtras.Size = New System.Drawing.Size(147, 46)
         Me.btnAtras.TabIndex = 35
         Me.btnAtras.Text = "Atrás"
         Me.btnAtras.UseVisualStyleBackColor = True
         '
         'frmClienteBaja
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 144)
+        Me.ClientSize = New System.Drawing.Size(489, 177)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.btnDarDeBaja)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmClienteBaja"
-        Me.Text = "ClienteBaja"
+        Me.Text = "Eliminar cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

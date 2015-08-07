@@ -286,7 +286,7 @@ Partial Class frmClienteModificar
         Me.Controls.Add(Me.btnAtras)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClienteModificar"
-        Me.Text = "ClienteModificar"
+        Me.Text = "Modificar cliente"
         Me.gboxDatos.ResumeLayout(False)
         Me.gboxDatos.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

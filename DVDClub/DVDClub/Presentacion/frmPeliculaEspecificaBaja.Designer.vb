@@ -142,7 +142,7 @@ Partial Class frmPeliculaEspecificaBaja
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPeliculaEspecificaBaja"
-        Me.Text = "frmPeliculaEspecificaBaja"
+        Me.Text = "Eliminar pelicula especifica"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.ErrProviderBajaPeliculaEspecifica, System.ComponentModel.ISupportInitialize).EndInit()

@@ -37,11 +37,9 @@ Partial Class frmPrincipal
         Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IniciarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BajaClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BajaClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesActivosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,7 +53,7 @@ Partial Class frmPrincipal
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(540, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(923, 28)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -141,16 +139,10 @@ Partial Class frmPrincipal
         '
         'SesionToolStripMenuItem
         '
-        Me.SesionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IniciarSesionToolStripMenuItem, Me.CerrarSesionToolStripMenuItem})
+        Me.SesionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesionToolStripMenuItem})
         Me.SesionToolStripMenuItem.Name = "SesionToolStripMenuItem"
         Me.SesionToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.SesionToolStripMenuItem.Text = "Sesion"
-        '
-        'IniciarSesionToolStripMenuItem
-        '
-        Me.IniciarSesionToolStripMenuItem.Name = "IniciarSesionToolStripMenuItem"
-        Me.IniciarSesionToolStripMenuItem.Size = New System.Drawing.Size(163, 24)
-        Me.IniciarSesionToolStripMenuItem.Text = "Iniciar sesion"
         '
         'CerrarSesionToolStripMenuItem
         '
@@ -160,7 +152,7 @@ Partial Class frmPrincipal
         '
         'ClientesToolStripMenuItem1
         '
-        Me.ClientesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.BajaClienteToolStripMenuItem, Me.BajaClientesToolStripMenuItem})
+        Me.ClientesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.BajaClientesToolStripMenuItem})
         Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
         Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(73, 24)
         Me.ClientesToolStripMenuItem1.Text = "Clientes"
@@ -168,19 +160,13 @@ Partial Class frmPrincipal
         'ConsultarToolStripMenuItem
         '
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(140, 24)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
-        '
-        'BajaClienteToolStripMenuItem
-        '
-        Me.BajaClienteToolStripMenuItem.Name = "BajaClienteToolStripMenuItem"
-        Me.BajaClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.BajaClienteToolStripMenuItem.Text = "Clientes activos"
         '
         'BajaClientesToolStripMenuItem
         '
         Me.BajaClientesToolStripMenuItem.Name = "BajaClientesToolStripMenuItem"
-        Me.BajaClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.BajaClientesToolStripMenuItem.Size = New System.Drawing.Size(140, 24)
         Me.BajaClientesToolStripMenuItem.Text = "Eliminar"
         '
         'ReportesToolStripMenuItem
@@ -193,7 +179,7 @@ Partial Class frmPrincipal
         'ClientesActivosToolStripMenuItem
         '
         Me.ClientesActivosToolStripMenuItem.Name = "ClientesActivosToolStripMenuItem"
-        Me.ClientesActivosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ClientesActivosToolStripMenuItem.Size = New System.Drawing.Size(196, 24)
         Me.ClientesActivosToolStripMenuItem.Text = "Clientes activos"
         '
         'ClientesDeudoresToolStripMenuItem
@@ -206,11 +192,14 @@ Partial Class frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(540, 409)
+        Me.BackgroundImage = Global.DVDClub.My.Resources.Resources.DVDCLUB01
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ClientSize = New System.Drawing.Size(923, 614)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Principal"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -232,10 +221,8 @@ Partial Class frmPrincipal
     Friend WithEvents RegistrarToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RegistrarDevolucionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IniciarSesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents BajaClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BajaClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem

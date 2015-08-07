@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Martin\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +60,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4A9C81B764BDA26555CE3C6C59B8433B6CEA292B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DVDClub_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -81,6 +109,11 @@
     <Compile Include="Datos\fPeliculaEspecifica.vb" />
     <Compile Include="Datos\fSesion.vb" />
     <Compile Include="Datos\fUsuario.vb" />
+    <Compile Include="ds3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dvdclubdbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,12 +176,6 @@
       <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmClienteNuevo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmClientesActivos.Designer.vb">
-      <DependentUpon>frmClientesActivos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmClientesActivos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmPrincipal.vb">
@@ -252,9 +279,6 @@
     <EmbeddedResource Include="Presentacion\frmClienteNuevo.resx">
       <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmClientesActivos.resx">
-      <DependentUpon>frmClientesActivos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +319,17 @@
     <EmbeddedResource Include="Reportes\rptClientesDeudores.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ds3.xsc">
+      <DependentUpon>ds3.xsd</DependentUpon>
+    </None>
+    <None Include="ds3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds3.xss">
+      <DependentUpon>ds3.xsd</DependentUpon>
+    </None>
     <None Include="dvdclubdbDataSet.xsc">
       <DependentUpon>dvdclubdbDataSet.xsd</DependentUpon>
     </None>
@@ -339,6 +374,7 @@
     <None Include="dvdclubdbDataSetDeudores.xss">
       <DependentUpon>dvdclubdbDataSetDeudores.xsd</DependentUpon>
     </None>
+    <None Include="DVDClub_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -361,7 +397,9 @@
       <DependentUpon>SatasetDeudores.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\DVDCLUB01.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Actualizar.gif" />
   </ItemGroup>
@@ -427,6 +465,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NuevoD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

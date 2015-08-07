@@ -94,7 +94,7 @@ Partial Class frmPeliculaBaja
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPeliculaBaja"
-        Me.Text = "PeliculaBaja"
+        Me.Text = "Eliminar pelicula"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

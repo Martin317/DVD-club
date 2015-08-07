@@ -2,6 +2,7 @@
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         ingresar()
+
     End Sub
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
@@ -20,6 +21,7 @@
             If correcto = True Then
                 frmPrincipal.Show()
                 Me.Visible = False
+                txtContraseña.Clear()
             Else
                 MsgBox("Usuario o contraseña incorrectos", MsgBoxStyle.Critical, "Error!")
                 txtContraseña.Clear()
@@ -37,5 +39,5 @@
         End If
     End Sub
 
-
+    
 End Class

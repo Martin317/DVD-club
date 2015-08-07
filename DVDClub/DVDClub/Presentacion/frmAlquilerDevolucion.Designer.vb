@@ -201,7 +201,7 @@ Partial Class frmAlquilerDevolucion
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmAlquilerDevolucion"
-        Me.Text = "frmAlquilerDevolucion"
+        Me.Text = "Devolucion alquiler"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

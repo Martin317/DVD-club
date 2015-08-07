@@ -71,7 +71,7 @@ Partial Class frmPeliculaNueva
         '
         Me.dtpFechaLanzamiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaLanzamiento.Location = New System.Drawing.Point(577, 89)
-        Me.dtpFechaLanzamiento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFechaLanzamiento.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaLanzamiento.Name = "dtpFechaLanzamiento"
         Me.dtpFechaLanzamiento.Size = New System.Drawing.Size(205, 22)
         Me.dtpFechaLanzamiento.TabIndex = 27
@@ -80,7 +80,7 @@ Partial Class frmPeliculaNueva
         'txtDescripcion
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(129, 146)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcion.MaxLength = 500
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
@@ -90,7 +90,7 @@ Partial Class frmPeliculaNueva
         'txtGenero
         '
         Me.txtGenero.Location = New System.Drawing.Point(129, 91)
-        Me.txtGenero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtGenero.Margin = New System.Windows.Forms.Padding(4)
         Me.txtGenero.MaxLength = 20
         Me.txtGenero.Name = "txtGenero"
         Me.txtGenero.Size = New System.Drawing.Size(217, 22)
@@ -99,7 +99,7 @@ Partial Class frmPeliculaNueva
         'txtIdioma
         '
         Me.txtIdioma.Location = New System.Drawing.Point(577, 36)
-        Me.txtIdioma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIdioma.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdioma.MaxLength = 20
         Me.txtIdioma.Name = "txtIdioma"
         Me.txtIdioma.Size = New System.Drawing.Size(205, 22)
@@ -108,7 +108,7 @@ Partial Class frmPeliculaNueva
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(129, 36)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.MaxLength = 60
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(217, 22)
@@ -173,7 +173,7 @@ Partial Class frmPeliculaNueva
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.Location = New System.Drawing.Point(679, 352)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(147, 46)
         Me.btnCancelar.TabIndex = 25
@@ -184,7 +184,7 @@ Partial Class frmPeliculaNueva
         '
         Me.btnConfirmar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmar.Location = New System.Drawing.Point(524, 352)
-        Me.btnConfirmar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConfirmar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConfirmar.Name = "btnConfirmar"
         Me.btnConfirmar.Size = New System.Drawing.Size(147, 46)
         Me.btnConfirmar.TabIndex = 26
@@ -199,9 +199,9 @@ Partial Class frmPeliculaNueva
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnConfirmar)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPeliculaNueva"
-        Me.Text = "PeliculaNueva"
+        Me.Text = "Registrar pelicula"
         CType(Me.ErrProviderPeliculaNueva, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

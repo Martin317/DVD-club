@@ -121,7 +121,7 @@ Partial Class frmPeliculaEspecificaRegistrar
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmPeliculaEspecificaRegistrar"
-        Me.Text = "frmPeliculaEspecificaRegistrar"
+        Me.Text = "Registrar ejemplar"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.ErrProviderPeliculaEspecificaRegistrar, System.ComponentModel.ISupportInitialize).EndInit()
