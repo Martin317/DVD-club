@@ -29,9 +29,9 @@
     Private Sub dgvAlquileres_SelectionChanged(sender As Object, e As EventArgs) Handles dgvAlquileres.SelectionChanged
         'TODO Fecha detalle a calcular porque no podemos
         
-        ' Dim hora As DateTime = dgvAlquileres.CurrentRow.Cells(2).Value
+        Dim hora = dgvAlquileres.CurrentRow.Cells(2).Value
         ' Dim fechaActual As DateTime = Convert.ToDateTime(DateAndTime.Now.ToShortDateString)
-
+        Label4.Text = Convert.ToString(Convert.ToDateTime(System.DateTime.Now.ToShortDateString).Subtract(Convert.ToDateTime(dgvAlquileres.CurrentRow.Cells(2).Value)))
         If dgvAlquileres.CurrentRow IsNot Nothing Then
             Dim funcDetalleAlquiler As New fDetalleAlquiler
             Dim alquilerID As Integer = CType(dgvAlquileres.CurrentRow.Cells(0).Value, Integer)
